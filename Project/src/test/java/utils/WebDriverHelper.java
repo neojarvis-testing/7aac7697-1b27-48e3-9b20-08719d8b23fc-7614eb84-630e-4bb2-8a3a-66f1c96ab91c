@@ -50,11 +50,46 @@ public class WebDriverHelper {
         }
     }
 
-    public void waitForTheElementToBeVisible(By locator, int timeOutInSeconds) {
-
+     public void waitForTheElementToBeVisible(By locator, int timeOutInSeconds) {
         try {
             new WebDriverWait(driver, Duration.ofSeconds(timeOutInSeconds))
                     .until(ExpectedConditions.visibilityOfElementLocated(locator));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+  
+    public List<WebElement> getElementsByPath(By locator) {
+
+        List<WebElement> elements = new ArrayList<>();
+        try {
+            elements = driver.findElements(locator);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return elements;
+    }
+
+    public void iterate(String text, By locator) {
+        try {
+            List<WebElement> products = getElementsByPath(locator);
+            for (WebElement product : products) {
+                String label = product.getText();
+                if (label.contains(text)) {
+                    product.click();
+                    break;
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void hoverOverElement(By locator) {
+        try {
+            WebElement element = driver.findElement(locator);
+            Actions action = new Actions(driver);
+            action.moveToElement(element).perform();
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -86,7 +121,7 @@ public class WebDriverHelper {
     catch(Exception e){
         e.printStackTrace();
     }
-    }
+}
 
     public void switchBackward(int index) {
         try{
@@ -94,6 +129,16 @@ public class WebDriverHelper {
     }
     catch(Exception e){
         e.printStackTrace();
+    }
+}
+    public void selectDropDown(By locator,String str){
+        try {
+            WebElement element=driver.findElement(locator);
+            Select dropdown=new Select(element);
+            dropdown.selectByVisibleText(str);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }
     public void switchToiframe(By locator){
@@ -114,4 +159,3 @@ public class WebDriverHelper {
         }
     }
 }
-
