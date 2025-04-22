@@ -124,6 +124,7 @@ public class HomePageActions_arun01 {
         applyMen();
         applyMetal();
         applyGold();
+        clickProduct();
         clickRingProduct();
         clickCart();
     }
