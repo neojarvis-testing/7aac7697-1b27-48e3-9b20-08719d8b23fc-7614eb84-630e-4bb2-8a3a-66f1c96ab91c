@@ -1,108 +1,155 @@
 package pages;
 
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.Status;
+
 import uistore.HomePageLocators_Shambhavi01;
-//import utils.Assertion;
 import utils.Base;
+import utils.LoggerHandler;
 import utils.WebDriverHelper;
 
 public class HomePageActions_Shambhavi01 {
     WebDriverHelper helper;
-
-    // Assertion assertion;
-    public HomePageActions_Shambhavi01() {
-        try {
+    ExtentTest test;
+    public HomePageActions_Shambhavi01(ExtentTest test) {
             helper = new WebDriverHelper(Base.driver);
-            // assertion=new Assertion(Base.driver);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+            this.test=test;
+            
     }
 
     public void clickOnReturnRefund() {
         try {
+            helper.waitForTheElementToBeVisible(HomePageLocators_Shambhavi01.returnAndrefund, 10);
             helper.clickOnElement(HomePageLocators_Shambhavi01.returnAndrefund);
+            LoggerHandler.info("clicked on Return and Refund Policy");
+            test.info("clicked on Return and Refund Policy");
+            test.log(Status.PASS, "clicked on Return and Refund Policy");  
             // assertion.verifyTitle("Best Online Shopping Offers In India - Reliance
             // Jewels");
             // assertion.verifyUrl("https://www.reliancejewels.com/s/return-policy");
 
         } catch (Exception e) {
-            e.printStackTrace();
+            LoggerHandler.error("clicked on Return and Refund Policy");
+            test.fail("clicked on Return and Refund Policy");
+            test.log(Status.FAIL, "clicked on Return and Refund Policy");
         }
 
     }
 
     public void clickOnShippingPolicy() {
         try {
+            helper.waitForTheElementToBeVisible(HomePageLocators_Shambhavi01.shippingPolicy, 10);
             helper.clickOnElement(HomePageLocators_Shambhavi01.shippingPolicy);
+            LoggerHandler.info("clicked on Shipping Policy");
+            test.info("clicked on Shipping Policy");
+            test.log(Status.PASS, "clicked on Shipping Policy");  
             // ast.verifyTitle();
             // ast.verifyUrl("https://www.reliancejewels.com/s/shipping-policy");
         } catch (Exception e) {
-            e.printStackTrace();
+            LoggerHandler.error("clicked on Shipping policy");
+            test.fail("clicked on Shipping policy");
+            test.log(Status.FAIL, "clicked on Shipping policy");
         }
     }
 
     public void clickOnPrivacyPolicy() {
         try {
+            helper.waitForTheElementToBeVisible(HomePageLocators_Shambhavi01.privacyPolicy, 10);
             helper.clickOnElement(HomePageLocators_Shambhavi01.privacyPolicy);
+            LoggerHandler.info("clicked on Privacy policy");
+            test.info("clicked on Privacy policy");
+            test.log(Status.PASS, "clicked on Privacy policy");  
             // ast.verifyTitle();
             // ast.verifyUrl("https://www.reliancejewels.com/s/privacy-policy");
         } catch (Exception e) {
-            e.printStackTrace();
+            LoggerHandler.error("clicked on Privacy policy");
+            test.fail("clicked on Privacy policy");
+            test.log(Status.FAIL, "clicked on Privacy policy");
         }
     }
 
     public void clickOnExchange() {
         try {
+            helper.waitForTheElementToBeVisible(HomePageLocators_Shambhavi01.oldGoldExchangePolicy, 10);
             helper.clickOnElement(HomePageLocators_Shambhavi01.oldGoldExchangePolicy);
+            LoggerHandler.info("clicked on Old Gold Exchange Policy");
+            test.info("clicked on Old Gold Exchange Policy");
+            test.log(Status.PASS, "clicked on Old Gold Exchange Policy");  
             // ast.verifyTitle(null);
             // ast.verifyUrl("https://www.reliancejewels.com/s/OldGoldExchange");
         } catch (Exception e) {
-            e.printStackTrace();
+            LoggerHandler.error("clicked on Old Gold Exchange Policy");
+            test.fail("clicked on Old Gold Exchange Policy");
+            test.log(Status.FAIL, "clicked on Old Gold Exchange Policy");
         }
     }
 
     public void clickOnfeesAndPaymentPolicy() {
         try {
+            helper.waitForTheElementToBeVisible(HomePageLocators_Shambhavi01.feesAndPaymentsPolicy, 10);
             helper.clickOnElement(HomePageLocators_Shambhavi01.feesAndPaymentsPolicy);
+            LoggerHandler.info("clicked on Fees and Payments policy");
+            test.info("clicked on Fees and Payments policy");
+            test.log(Status.PASS, "clicked on Fees and Payments policy");  
             // ast.verifyTitle(null);
             // ast.verifyUrl("https://www.reliancejewels.com/s/feesandpayments-policy");
         } catch (Exception e) {
-            e.printStackTrace();
+            LoggerHandler.error("clicked on Fees and Payments policy");
+            test.fail("clicked on Fees and Payments policy");
+            test.log(Status.FAIL, "clicked on Fees and Payments policy");
         }
     }
 
     public void clickOnTermsandConditions() {
         try {
+            helper.waitForTheElementToBeVisible(HomePageLocators_Shambhavi01.termsAndConditions, 10);
             helper.clickOnElement(HomePageLocators_Shambhavi01.termsAndConditions);
+            LoggerHandler.info("clicked on Terms and Conditions");
+            test.info("clicked on Terms and Conditions");
+            test.log(Status.PASS, "clicked on Terms and Conditions");  
             // ast.verifyTitle();
             // ast.verifyUrl("https://www.reliancejewels.com/s/tandc-policy");
         } catch (Exception e) {
-            e.printStackTrace();
+            LoggerHandler.error("clicked on Terms and Conditions");
+            test.fail("clicked on Terms and Conditions");
+            test.log(Status.FAIL, "clicked on Terms and Conditions");
         }
     }
 
     public void clickOnRelianceLoyalty() {
         try {
+            helper.waitForTheElementToBeVisible(HomePageLocators_Shambhavi01.relianceLoyalty, 10);
             helper.clickOnElement(HomePageLocators_Shambhavi01.relianceLoyalty);
+            LoggerHandler.info("clicked on RelianceOne Loyalty T & C");
+            test.info("clicked on RelianceOne Loyalty T & C");
+            test.log(Status.PASS, "clicked on RelianceOne Loyalty T & C");  
             // ast.verifyTitle();
             // ast.verifyUrl("ttps://www.reliancejewels.com/s/rone-tc");
         } catch (Exception e) {
-            e.printStackTrace();
+            LoggerHandler.error("clicked on RelianceOne Loyalty T & C");
+            test.fail("clicked on RelianceOne Loyalty T & C");
+            test.log(Status.FAIL, "clicked on RelianceOne Loyalty T & C");
         }
     }
 
     public void clickOnDisclaimer() {
         try {
+            helper.waitForTheElementToBeVisible(HomePageLocators_Shambhavi01.disclaimer, 10);
             helper.clickOnElement(HomePageLocators_Shambhavi01.disclaimer);
+            LoggerHandler.info("clicked on Disclaimer");
+            test.info("clicked on Disclaimer");
+            test.log(Status.PASS, "clicked on Disclaimer");  
             // ast.verifyTitle();
             // ast.verifyUrl("https://www.reliancejewels.com/s/disclaimer");
 
         } catch (Exception e) {
-            e.printStackTrace();
+            LoggerHandler.error("clicked on Disclaimer");
+            test.fail("clicked on Disclaimer");
+            test.log(Status.FAIL, "clicked on Disclaimer");
         }
     }
 
-    public void testcase1() {
+    public void testCase9() {
         clickOnReturnRefund();
         clickOnShippingPolicy();
         clickOnPrivacyPolicy();
