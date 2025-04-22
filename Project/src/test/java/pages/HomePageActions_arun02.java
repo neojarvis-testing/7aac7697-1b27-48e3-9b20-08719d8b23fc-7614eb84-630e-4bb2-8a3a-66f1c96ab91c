@@ -1,16 +1,22 @@
 package pages;
 
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.Status;
+
 import uistore.HomePageLocators_arun02;
 import utils.Assertion;
 import utils.Base;
+import utils.LoggerHandler;
+import utils.Screenshot;
 import utils.WebDriverHelper;
 
 public class HomePageActions_arun02 {
     WebDriverHelper helper;
     Assertion asserts;
-
-    public HomePageActions_arun02() {
+    ExtentTest test;
+    public HomePageActions_arun02(ExtentTest test) {
         helper = new WebDriverHelper(Base.driver);
+        this.test=test;
     }
 
     public void clickSearch() {
@@ -70,8 +76,13 @@ public class HomePageActions_arun02 {
         try {
             helper.waitForTheElementToBeVisible(HomePageLocators_arun02.necklace, 10);
             helper.clickOnElement(HomePageLocators_arun02.necklace);
+            LoggerHandler.info("click on the first product");
+            test.info("click on the first product");
+            test.log(Status.PASS,"click on the first product");
         } catch (Exception e) {
-            e.printStackTrace();
+            LoggerHandler.info("click on the first product");
+            test.info("click on the first product");
+            test.log(Status.FAIL,"click on the first product");
         }
     }
 
@@ -89,19 +100,31 @@ public class HomePageActions_arun02 {
         try {
             helper.waitForTheElementToBeVisible(HomePageLocators_arun02.buy, 10);
             helper.clickOnElement(HomePageLocators_arun02.buy);
+            Screenshot.takeScreenshotWithTimestamp("My Cart");
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
+    public void clickProceedToPay(){
+        try{
+            helper.waitForTheElementToBeVisible(HomePageLocators_arun02.pay, 10);
+            helper.clickOnElement(HomePageLocators_arun02.pay);
+        }
+        catch(Exception e){
+            e.printStackTrace();
+        }
+    }
     public void test2() {
         clickSearch();
         enterNecklace();
         verifyNecklace();
         hoverProduct();
+        clickQuickView();
         clickPopup();
         clickNecklaceProduct();
         selectWeight();
         clickBuyNow();
+        clickProceedToPay();
     }
 }
