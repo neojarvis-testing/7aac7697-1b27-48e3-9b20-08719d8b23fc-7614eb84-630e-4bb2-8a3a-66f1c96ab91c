@@ -33,7 +33,7 @@ public class Reporter {
         return extent;
     }
 
-    public static void addScreenshot(String filename, ExtentTest test, String description, WebDriver driver) {
+    public static void addScreenshotToReport(String filename, ExtentTest test, String description, WebDriver driver) {
         try {
             String timestamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());
             String screenshotPath = System.getProperty("user.dir") + "/reports/" + filename + "_" + timestamp + ".png";
