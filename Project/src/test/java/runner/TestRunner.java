@@ -9,6 +9,7 @@ import com.aventstack.extentreports.ExtentTest;
 
 import pages.HomePageActions_Shambhavi01;
 import pages.HomePageActions_Vinay01;
+import pages.HomePageActions_Vinay02;
 import pages.HomePageActions_tapaswini01;
 import pages.HomePageActions_tapaswini02;
 import pages.HomePageActions_arun01;
@@ -18,8 +19,13 @@ import utils.Reporter;
 import pages.HomePageActions_Deekshitha01;
 
 public class TestRunner extends Base {
-    static ExtentTest test;
     static ExtentReports reports;
+    static ExtentTest test;
+    @BeforeMethod
+    public void launchRelianceJewels() {
+         openBrowser();
+        reports=Reporter.generateTestReport("Reliance_Report");
+        test=reports.createTest("Reliance_TestFile");
     @BeforeMethod
     public void launchRelianceJewels() {
         openBrowser();
@@ -39,10 +45,14 @@ public class TestRunner extends Base {
 
     @Test
     public void testCase1() {
-        HomePageActions_Vinay01 obj1 = new HomePageActions_Vinay01();
+        HomePageActions_Vinay01 obj1 = new HomePageActions_Vinay01(test);
         obj1.test1();
     }
-
+    @Test
+    public void testCase2() {
+        HomePageActions_Vinay02 obj1 = new HomePageActions_Vinay02(test);
+        obj1.test2();
+    }
     @Test
     public void vivahamTest() {
         HomePageActions_tapaswini01 vivahamPageActions = new HomePageActions_tapaswini01(driver,test);
@@ -68,6 +78,12 @@ public class TestRunner extends Base {
         vivahamPageActions.switchToMainWindow();
         vivahamPageActions.scrollToDelhiText();
         vivahamPageActions.clickDelhi();
+       // vivahamPageActions.verifyDelhiPage();
+       // vivahamPageActions.verifySortByText();
+    }
+    @Test
+    public void testCase1Arun() {
+        HomePageActions_arun01 obj1 = new HomePageActions_arun01();
         // vivahamPageActions.verifyDelhiPage();
         // vivahamPageActions.verifySortByText();
     }
