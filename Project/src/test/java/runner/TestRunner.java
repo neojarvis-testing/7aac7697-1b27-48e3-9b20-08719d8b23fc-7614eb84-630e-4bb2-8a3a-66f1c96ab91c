@@ -3,8 +3,7 @@ package runner;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-
-
+import pages.HomePageActions_Vinay01;
 import pages.HomePageActions_tapaswini01;
 import pages.HomePageActions_arun01;
 import pages.HomePageActions_arun02;
@@ -15,8 +14,11 @@ public class TestRunner extends Base {
     public void launchRelianceJewels() {
         openBrowser();
     }
-
     @Test
+    public void testCase1() {
+        HomePageActions_Vinay01 obj1 = new HomePageActions_Vinay01();
+        obj1.test1();
+    }
     public void vivahamTest() {
         HomePageActions_tapaswini01 vivahamPageActions = new HomePageActions_tapaswini01(driver);
         vivahamPageActions.verifyLogo();
@@ -39,7 +41,6 @@ public class TestRunner extends Base {
         HomePageActions_arun01 obj1 = new HomePageActions_arun01();
         obj1.test1();
     }
-
     @Test
     public void testCase2() {
         HomePageActions_arun02 obj2 = new HomePageActions_arun02();
@@ -49,4 +50,3 @@ public class TestRunner extends Base {
     public void closeRelianceJewels() {
         driver.quit();
     }
-}
