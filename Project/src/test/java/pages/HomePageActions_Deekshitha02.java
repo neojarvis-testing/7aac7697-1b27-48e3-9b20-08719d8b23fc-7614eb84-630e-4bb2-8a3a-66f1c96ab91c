@@ -64,8 +64,8 @@ public class HomePageActions_Deekshitha02 {
         // assertion.verifyTitle("Reliance Jewels : Track an order");
         Base.driver.navigate().back();
         // assertion.verifyText(HomePageLocators_Deekshitha02.fastShipping, "Fast Shipping");
-        Screenshot.takeScreenshotWithTimestamp("Reliance_Report");
-        Reporter.addScreenshotToReport("Reliance_Report", test, "Reliance_Report",Base.driver);
+        Screenshot.takeScreenshotWithTimestamp("reliancejewels");
+        Reporter.addScreenshotToReport("reliancejewels", test, "Reliance jewels screenshot",Base.driver);
     }
     public void TestCase2(){
         clickOnAboutUs();

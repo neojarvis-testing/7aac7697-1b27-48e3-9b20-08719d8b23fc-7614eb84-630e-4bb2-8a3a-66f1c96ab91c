@@ -65,44 +65,12 @@ public class TestRunner extends Base {
         HomePageActions_tapaswini01 vivahamPageActions = new HomePageActions_tapaswini01(driver,test);
         vivahamPageActions.vivaham();
     }
-
-    @Test
-    public void testCase1Arun() {
-        HomePageActions_arun01 obj1 = new HomePageActions_arun01();
-    @Test
-    public void vivahamTest() {
-        HomePageActions_tapaswini01 vivahamPageActions = new HomePageActions_tapaswini01(driver);
-        // vivahamPageActions.verifyLogo();
-        vivahamPageActions.hoverWhatsTrending();
-        vivahamPageActions.clickVivaham();
-        // vivahamPageActions.verifyUrlVivaham();
-        vivahamPageActions.clickLocateAStore();
-        vivahamPageActions.storeListPageVerify();
-        vivahamPageActions.selectState();
-        vivahamPageActions.selectCity();
-        // vivahamPageActions.verifyStoreLocatorUrl();
-        vivahamPageActions.clickSearch();
-        vivahamPageActions.switchToMainWindow();
-        vivahamPageActions.scrollToDelhiText();
-        vivahamPageActions.clickDelhi();
-        // vivahamPageActions.verifyDelhiPage();
-        // vivahamPageActions.verifySortByText();
-    }
-    @Test
-    public void testCase1Arun() {
-        HomePageActions_arun01 obj1 = new HomePageActions_arun01();
-        // vivahamPageActions.verifyDelhiPage();
-        // vivahamPageActions.verifySortByText();
-    }
     @Test
     public void executeTestCase1() {
         HomePageActions_arun01 obj1 = new HomePageActions_arun01(test);
         obj1.test1();
     }
-
     @Test
-    public void testCase2Arun() {
-        HomePageActions_arun02 obj2 = new HomePageActions_arun02();
     public void executeTestCase2() {
         HomePageActions_arun02 obj2 = new HomePageActions_arun02(test);
         obj2.test2();
