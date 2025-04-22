@@ -47,7 +47,7 @@ public class Assertion {
         try {
             String element = driver.findElement(locator).getDomAttribute("src");
             Boolean check = element.isEmpty();
-            Assert.assertTrue(check);
+            Assert.assertTrue(!check);
         } catch (Exception e) {
             e.printStackTrace();
         }
