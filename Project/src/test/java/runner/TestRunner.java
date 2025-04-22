@@ -8,11 +8,17 @@ import pages.HomePageActions_tapaswini01;
 import pages.HomePageActions_arun01;
 import pages.HomePageActions_arun02;
 import utils.Base;
+import pages.HomePageActions_Deekshitha01;
 
 public class TestRunner extends Base {
     @BeforeMethod
     public void launchRelianceJewels() {
         openBrowser();
+    }
+    @Test
+    public void Test1() {
+        HomePageActions_Deekshitha01 hp = new HomePageActions_Deekshitha01();
+        hp.TestCase1();
     }
     @Test
     public void testCase1() {
@@ -50,3 +56,5 @@ public class TestRunner extends Base {
     public void closeRelianceJewels() {
         driver.quit();
     }
+}
+
