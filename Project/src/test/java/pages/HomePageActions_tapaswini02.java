@@ -90,6 +90,7 @@ public void clickGender(){
 }
 public void clickWomen(){
     try{
+        webDriverHelper.waitForTheElementToBeVisible(diamondEarrings.womenDiamond,10);
         webDriverHelper.clickOnElement(diamondEarrings.womenDiamond);
         LoggerHandler.info("clicked on women");
         test.info("clicked on search field");

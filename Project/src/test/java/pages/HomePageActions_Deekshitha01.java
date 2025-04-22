@@ -51,6 +51,7 @@ public class HomePageActions_Deekshitha01 {
 
     public void clickOnWomen() {
         try {
+            helper.waitForTheElementToBeVisible(HomePageLocators_Deekshitha01.women,10);
             helper.clickOnElement(HomePageLocators_Deekshitha01.women);
         } catch (Exception e) {
             e.printStackTrace();

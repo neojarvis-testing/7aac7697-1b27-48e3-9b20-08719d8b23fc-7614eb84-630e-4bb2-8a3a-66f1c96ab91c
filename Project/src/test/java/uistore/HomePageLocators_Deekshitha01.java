@@ -6,7 +6,6 @@ public class HomePageLocators_Deekshitha01 {
     public static By coins = By.xpath("(//a[text()='Chain'])");
     public static By silver = By.xpath("(//a[text()='Silver'])[4]");
     public static By categories=By.xpath("(//div[text()='categories'])[1]");
-    public static By categories = By.xpath("(//div[text()='categories'])[1]");
     public static By gender = By.xpath("(//div[text()='Gender'])");
     public static By women = By.xpath("(//a[text()=' Women '])");
     public static By morefilters = By.cssSelector(".filtersbutton");
