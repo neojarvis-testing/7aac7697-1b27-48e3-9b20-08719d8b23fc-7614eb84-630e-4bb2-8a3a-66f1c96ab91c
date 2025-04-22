@@ -11,6 +11,7 @@ import pages.HomePageActions_Shambhavi01;
 import pages.HomePageActions_Vinay01;
 import pages.HomePageActions_Vinay02;
 import pages.HomePageActions_tapaswini01;
+import pages.HomePageActions_Shambhavi02;
 import pages.HomePageActions_tapaswini02;
 import pages.HomePageActions_arun01;
 import pages.HomePageActions_arun02;
@@ -20,31 +21,35 @@ import pages.HomePageActions_Deekshitha01;
 import pages.HomePageActions_Deekshitha02;
 
 public class TestRunner extends Base {
-    static ExtentTest test;
-    static ExtentReports reports;
+    ExtentReports reports;
+    ExtentTest test;
+
     @BeforeMethod
     public void launchRelianceJewels() {
         openBrowser();
-        reports=Reporter.generateTestReport("Reliance_Report");
-        test=reports.createTest("Reliance_TestFile");
+        reports = Reporter.generateTestReport("Reliance_Report");
+        test = reports.createTest("Reliance_TestFile");
     }
     @Test
-    public void reliance() {
-        HomePageActions_Shambhavi01 hp = new HomePageActions_Shambhavi01();
-        hp.testcase1();
+    public void executeTestCase9() {
+        HomePageActions_Shambhavi01 obj9 = new HomePageActions_Shambhavi01(test);
+        obj9.testCase9();
+    }
+    @Test
+    public void executeTestCase10() {
+        HomePageActions_Shambhavi02 obj10 = new HomePageActions_Shambhavi02(test);
+        obj10.testCase10();
     }
     @Test
     public void Test1() {
         HomePageActions_Deekshitha01 hp = new HomePageActions_Deekshitha01();
         hp.TestCase1();
     }
-
     @Test
     public void Test2() {
         HomePageActions_Deekshitha02 hp2 = new HomePageActions_Deekshitha02(test);
         hp2.TestCase2();
     }
-
     @Test
     public void testCase1() {
         HomePageActions_Vinay01 obj1 = new HomePageActions_Vinay01(test);
