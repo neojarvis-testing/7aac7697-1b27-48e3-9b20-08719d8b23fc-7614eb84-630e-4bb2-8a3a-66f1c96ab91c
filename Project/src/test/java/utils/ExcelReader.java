@@ -82,4 +82,34 @@ public class ExcelReader {
 
     }
 
+    public static String[][] readDataForDataProvider(String filepath, String sheetname) throws IOException {
+        try {
+            filein = new FileInputStream(filepath);
+            workbook = new XSSFWorkbook(filein);
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        sheet = workbook.getSheet(sheetname);
+        int rowCount = sheet.getPhysicalNumberOfRows();
+        int colCount = sheet.getRow(0).getPhysicalNumberOfCells();
+
+        String[][] data = new String[rowCount - 1][colCount];
+
+        for (int i = 1; i < rowCount; i++) {
+            row = sheet.getRow(i);
+            for (int j = 0; j < colCount; j++) {
+                col = row.getCell(j);
+                DataFormatter formatter = new DataFormatter();
+                data[i - 1][j] = formatter.formatCellValue(col);
+            }
+        }
+
+        workbook.close();
+        filein.close();
+        return data;
+    }
+
 }

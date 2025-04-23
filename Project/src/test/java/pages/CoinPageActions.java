@@ -1,30 +1,27 @@
 package pages;
-import org.openqa.selenium.WebDriver;
-import com.aventstack.extentreports.ExtentTest;
-import uistore.CoinPageLocators;
-import utils.Assertion;
-import utils.Base;
+ 
+ 
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
-import org.openqa.selenium.WebDriver;
-import com.aventstack.extentreports.ExtentTest;
+ 
 import uistore.CoinPageLocators;
 import utils.Assertion;
 import utils.Base;
 import utils.LoggerHandler;
 import utils.Screenshot;
 import utils.WebDriverHelper;
-
+ 
 public class CoinPageActions {
     WebDriverHelper helper;
     Assertion assertion;
     ExtentTest test;
+ 
     public CoinPageActions(ExtentTest test) {
         helper = new WebDriverHelper(Base.driver);
         assertion = new Assertion(Base.driver);
         this.test = test;
     }
-
+ 
     /*
      * Method Name: clickOnChains
      * Author Name: Deekshitha
@@ -44,10 +41,10 @@ public class CoinPageActions {
             LoggerHandler.error("Hovered on Coins");
             test.fail("Hovered on Coins");
             test.log(Status.FAIL, "Hovered on Coins");
-
+ 
         }
     }
-
+ 
     /*
      * Method Name: clickOnSilver
      * Author Name: Deekshitha
@@ -67,7 +64,7 @@ public class CoinPageActions {
             test.log(Status.FAIL, "Clicked on Silver");
         }
     }
-
+ 
     /*
      * Method Name: clickOnGender
      * Author Name: Deekshitha
@@ -88,7 +85,7 @@ public class CoinPageActions {
             test.log(Status.FAIL, "Clicked on Gender");
         }
     }
-
+ 
     /*
      * Method Name: clickOnWomen
      * Author Name: Deekshitha
@@ -103,14 +100,14 @@ public class CoinPageActions {
             LoggerHandler.info("Clicked on Women");
             test.info("Clicked on Women");
             test.log(Status.PASS, "Clicked on Women");
-
+ 
         } catch (Exception e) {
             LoggerHandler.error("Clicked on Women");
             test.fail("Clicked on Women");
             test.log(Status.FAIL, "Clicked on Women");
         }
     }
-
+ 
     /*
      * Method Name: clickOnMoreFilters
      * Author Name: Deekshitha
@@ -130,7 +127,7 @@ public class CoinPageActions {
             test.log(Status.FAIL, "Clicked on More Filters");
         }
     }
-
+ 
     /*
      * Method Name: clickOnTryOnAvailable
      * Author Name: Deekshitha
@@ -150,7 +147,7 @@ public class CoinPageActions {
             test.log(Status.FAIL, "Clicked on Available");
         }
     }
-
+ 
     /*
      * Method Name: clickOnYes
      * Author Name: Deekshitha
@@ -170,7 +167,7 @@ public class CoinPageActions {
             test.log(Status.FAIL, "Clicked on Yes");
         }
     }
-
+ 
     /*
      * Method Name: clickOnFirstProduct
      * Author Name: Deekshitha
@@ -190,7 +187,7 @@ public class CoinPageActions {
             test.log(Status.FAIL, "Clicked on Product");
         }
     }
-
+ 
     /*
      * Method Name: clickOnBuyNow
      * Author Name: Deekshitha
@@ -198,84 +195,6 @@ public class CoinPageActions {
      * Return Type: void
      * Parameter List: NA
      */
-    public CoinPageActions(ExtentTest test) {
-        try {
-            helper = new WebDriverHelper(Base.driver);
-            assertion = new Assertion(Base.driver);
-            this.test=test;
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
-    public void clickOnCoins() {
-        try {
-            // assertion.verifyLogo(HomePageLocators_Deekshitha01.logo);
-            //assertion.verifyLogo(HomePageLocators_Deekshitha01.logo);
-            helper.hoverOverElement(CoinPageLocators.coins);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
-    public void clickOnSilver() {
-        try {
-            helper.clickOnElement(CoinPageLocators.silver);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
-    public void clickOnGender() {
-        try {
-            // assertion.verifyText(HomePageLocators_Deekshitha01.categories, "categories");
-            //assertion.verifyText(HomePageLocators_Deekshitha01.categories, "categories");
-            helper.clickOnElement(CoinPageLocators.gender);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
-    public void clickOnWomen() {
-        try {
-            helper.waitForTheElementToBeVisible(CoinPageLocators.women,10);
-            helper.clickOnElement(CoinPageLocators.women);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
-    public void clickOnMoreFilters() {
-        try {
-            helper.clickOnElement(CoinPageLocators.morefilters);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
-    public void clickOnTryOnAvailable() {
-        try {
-            helper.clickOnElement(CoinPageLocators.tryOnAvailable);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
-    public void clickOnYes() {
-        try {
-            helper.clickOnElement(CoinPageLocators.yes);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
-    public void clickOnFirstProduct() {
-        try {
-            helper.clickOnElement(CoinPageLocators.firstProduct);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
     public void clickOnBuyNow() {
         try {
             helper.waitForTheElementToBeVisible(CoinPageLocators.productCode, 10);
@@ -291,7 +210,7 @@ public class CoinPageActions {
             test.log(Status.FAIL, "Clicked on BuyNow");
         }
     }
-
+ 
     /*
      * Method Name: TestCase1
      * Author Name: Deekshitha
@@ -310,27 +229,6 @@ public class CoinPageActions {
         clickOnYes();
         clickOnFirstProduct();
         clickOnBuyNow();
-            // assertion.verifyText(HomePageLocators_Deekshitha01.productCode, "508198");
-            //assertion.verifyText(HomePageLocators_Deekshitha01.productCode, "508198");
-            Screenshot.takeScreenshotWithTimestamp("Screenshot1");
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
-    public void test7() {
-        try {
-            clickOnCoins();
-            clickOnSilver();
-            clickOnGender();
-            clickOnWomen();
-            clickOnMoreFilters();
-            clickOnTryOnAvailable();
-            clickOnYes();
-            clickOnFirstProduct();
-            clickOnBuyNow();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
     }
 }
+ 

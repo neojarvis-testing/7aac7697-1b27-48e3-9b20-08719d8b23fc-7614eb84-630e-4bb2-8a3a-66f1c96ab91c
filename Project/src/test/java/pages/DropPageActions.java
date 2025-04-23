@@ -1,28 +1,27 @@
 package pages;
-
+ 
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
-
+ 
 import uistore.DropsPageLocators;
 import utils.Assertion;
 import utils.Base;
 import utils.LoggerHandler;
 import utils.Screenshot;
 import utils.WebDriverHelper;
-
+ 
 public class DropPageActions {
-
+ 
     WebDriverHelper helper;
     Assertion asserts;
     ExtentTest test;
+ 
     public DropPageActions(ExtentTest test) {
         helper = new WebDriverHelper(Base.driver);
         asserts = new Assertion(Base.driver);
-        this.test=test;
-    }
         this.test = test;
     }
-
+ 
     /*
      * Method Name: ValidateLogo
      * Author Name: vinay
@@ -30,11 +29,7 @@ public class DropPageActions {
      * Return Type: void
      * Parameter List: NA
      */
-    public DropPageActions(ExtentTest test) {
-        helper = new WebDriverHelper(Base.driver);
-        asserts = new Assertion(Base.driver);
-        this.test=test;
-    }
+ 
     public void validateLogo() {
         try {
             helper.waitForTheElementToBeVisible(DropsPageLocators.logoCheck, 10);
@@ -47,7 +42,7 @@ public class DropPageActions {
             test.fail("Validated logo");
             test.log(Status.FAIL, "Validated logo");
         }
-
+ 
     }
     /*
      * Method Name: hoverOverEarRings
@@ -56,6 +51,7 @@ public class DropPageActions {
      * Return Type: void
      * Parameter List: NA
      */
+ 
     public void hoverOverEarRings() {
         try {
             helper.hoverOverElement(DropsPageLocators.earRings);
@@ -68,7 +64,7 @@ public class DropPageActions {
             test.fail("Hovered on Earrings");
             test.log(Status.FAIL, "Hovered on Earrings");
         }
-
+ 
     }
     /*
      * Method Name: clickOnDrops
@@ -77,6 +73,7 @@ public class DropPageActions {
      * Return Type: void
      * Parameter List: NA
      */
+ 
     public void clickOnDrops() {
         try {
             helper.clickOnElement(DropsPageLocators.drops);
@@ -88,7 +85,7 @@ public class DropPageActions {
             test.fail("clicked on Drops");
             test.log(Status.FAIL, "clicked on Drops");
         }
-
+ 
     }
     /*
      * Method Name: verifyDrops
@@ -97,6 +94,7 @@ public class DropPageActions {
      * Return Type: void
      * Parameter List: NA
      */
+ 
     public void verifyDrops() {
         try {
             asserts.verifyUrl("Drops");
@@ -109,6 +107,7 @@ public class DropPageActions {
             test.log(Status.FAIL, "Verified Drops");
         }
     }
+ 
     /*
      * Method Name: clickOnCategories
      * Author Name: vinay
@@ -116,6 +115,7 @@ public class DropPageActions {
      * Return Type: void
      * Parameter List: NA
      */
+ 
     public void clickOnCategories() {
         try {
             helper.clickOnElement(DropsPageLocators.categories);
@@ -128,7 +128,7 @@ public class DropPageActions {
             test.fail("clicked on categories");
             test.log(Status.FAIL, "clicked on categories");
         }
-
+ 
     }
     /*
      * Method Name: clickOnGold
@@ -137,6 +137,7 @@ public class DropPageActions {
      * Return Type: void
      * Parameter List: NA
      */
+ 
     public void clickOnGold() {
         try {
             helper.clickOnElement(DropsPageLocators.gold);
@@ -149,8 +150,9 @@ public class DropPageActions {
             test.fail("clicked on Gold");
             test.log(Status.FAIL, "clicked on Gold");
         }
-
+ 
     }
+ 
     /*
      * Method Name: clickOnMoreFilters
      * Author Name: vinay
@@ -158,7 +160,7 @@ public class DropPageActions {
      * Return Type: void
      * Parameter List: NA
      */
-
+ 
     public void clickOnMoreFilters() {
         try {
             helper.clickOnElement(DropsPageLocators.morefilters);
@@ -171,9 +173,8 @@ public class DropPageActions {
             test.fail("clicked on more filters");
             test.log(Status.FAIL, "clicked on more filters");
         }
-
+ 
     }
-
     /*
      * Method Name: clickMetalPurity
      * Author Name: vinay
@@ -181,6 +182,7 @@ public class DropPageActions {
      * Return Type: void
      * Parameter List: NA
      */
+ 
     public void clickMetalPurity() {
         try {
             helper.clickOnElement(DropsPageLocators.metalPurity);
@@ -193,9 +195,9 @@ public class DropPageActions {
             test.fail("clicked on Metalpurity");
             test.log(Status.FAIL, "clicked on Metalpurity");
         }
-
+ 
     }
-
+ 
     /*
      * Method Name: clickOn22Kt
      * Author Name: vinay
@@ -203,6 +205,7 @@ public class DropPageActions {
      * Return Type: void
      * Parameter List: NA
      */
+   
     public void clickOn22Kt() {
         try {
             helper.clickOnElement(DropsPageLocators.purity22kt);
@@ -215,7 +218,7 @@ public class DropPageActions {
             test.fail("clicked on 22kt");
             test.log(Status.FAIL, "clicked on 22kt");
         }
-
+ 
     }
     /*
      * Method Name: clickOnFirstProduct
@@ -224,6 +227,7 @@ public class DropPageActions {
      * Return Type: void
      * Parameter List: NA
      */
+ 
     public void clickOnFirstproduct() {
         try {
             helper.clickOnElement(DropsPageLocators.firstProduct);
@@ -236,7 +240,7 @@ public class DropPageActions {
             test.fail("clicked on first product");
             test.log(Status.FAIL, "clicked on first product");
         }
-
+ 
     }
     /*
      * Method Name: verifyFeatures
@@ -246,6 +250,7 @@ public class DropPageActions {
      * Return Type: void
      * Parameter List: NA
      */
+ 
     public void verifyFeatures() {
         try {
             asserts.verifyText(DropsPageLocators.keyFeatures, "Key Features");
@@ -259,6 +264,7 @@ public class DropPageActions {
             test.log(Status.FAIL, "Key Features");
         }
     }
+ 
     /*
      * Method Name: clickOnBuynow
      * Author Name: vinay
@@ -267,6 +273,7 @@ public class DropPageActions {
      * Return Type: void
      * Parameter List: NA
      */
+ 
     public void clickOnBuynow() {
         try {
             helper.clickOnElement(DropsPageLocators.buyNow);
@@ -279,8 +286,9 @@ public class DropPageActions {
             test.fail("clicked on Buynow");
             test.log(Status.FAIL, "clicked on Buynow");
         }
-
+ 
     }
+ 
     /*
      * Method Name: test5
      * Author Name: vinay
@@ -289,6 +297,7 @@ public class DropPageActions {
      * Return Type: void
      * Parameter List: NA
      */
+ 
     public void test5() {
         validateLogo();
         hoverOverEarRings();
