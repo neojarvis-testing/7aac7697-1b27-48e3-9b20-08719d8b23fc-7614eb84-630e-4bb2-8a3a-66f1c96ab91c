@@ -4,6 +4,7 @@ import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 
 import uistore.PolicyPageLocators;
+
 import utils.Assertion;
 import utils.Base;
 import utils.LoggerHandler;
@@ -55,6 +56,7 @@ public class PolicyPageActions {
         }
 
     }
+
     /*
      * Method Name: clickOnShippingPolicy
      * Author Name: Shambhavi
@@ -121,6 +123,7 @@ public class PolicyPageActions {
             test.log(Status.PASS, "clicked on Old Gold Exchange Policy");
             assertion.verifyTitle("Best Online Shopping Offers In India - Reliance Jewels");
             assertion.verifyUrl("https://www.reliancejewels.com/s/OldGoldExchange");
+
             test.log(Status.PASS, "clicked on Old Gold Exchange Policy");  
             // ast.verifyTitle(null);
             // ast.verifyUrl("https://www.reliancejewels.com/s/OldGoldExchange");

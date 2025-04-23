@@ -158,6 +158,7 @@ public class DropPageActions {
      * Return Type: void
      * Parameter List: NA
      */
+
     public void clickOnMoreFilters() {
         try {
             helper.clickOnElement(DropsPageLocators.morefilters);
@@ -172,6 +173,7 @@ public class DropPageActions {
         }
 
     }
+
     /*
      * Method Name: clickMetalPurity
      * Author Name: vinay
@@ -193,6 +195,7 @@ public class DropPageActions {
         }
 
     }
+
     /*
      * Method Name: clickOn22Kt
      * Author Name: vinay

@@ -1,4 +1,9 @@
 package pages;
+import org.openqa.selenium.WebDriver;
+import com.aventstack.extentreports.ExtentTest;
+import uistore.CoinPageLocators;
+import utils.Assertion;
+import utils.Base;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 import org.openqa.selenium.WebDriver;

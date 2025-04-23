@@ -161,6 +161,7 @@ public class RingPageActions {
      * Return Type: N/A
      * Parameters: void
      */
+
     public void applyMetal() {
         try {
             helper.waitForTheElementToBeVisible(RingPageLocators.metal, 10);
