@@ -1,6 +1,7 @@
 package pages;
 
 import java.time.Duration;
+import java.util.logging.Logger;
 import org.openqa.selenium.WebDriver;
 
 import com.aventstack.extentreports.ExtentTest;
