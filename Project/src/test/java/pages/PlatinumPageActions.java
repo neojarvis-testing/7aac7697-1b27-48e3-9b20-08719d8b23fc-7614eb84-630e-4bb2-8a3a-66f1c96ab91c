@@ -2,19 +2,19 @@ package pages;
 
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
-import uistore.HomePageLocators_Vinay02;
+import uistore.PlatinumPageLocators;
 import utils.Assertion;
 import utils.Base;
 import utils.LoggerHandler;
 import utils.WebDriverHelper;
 
-public class HomePageActions_Vinay02 {
+public class PlatinumPageActions {
 
     WebDriverHelper helper;
     Assertion asserts;
     ExtentTest test;
 
-    public HomePageActions_Vinay02(ExtentTest test) {
+    public PlatinumPageActions(ExtentTest test) {
         helper = new WebDriverHelper(Base.driver);
         asserts = new Assertion(Base.driver);
         this.test = test;
@@ -30,8 +30,8 @@ public class HomePageActions_Vinay02 {
 
     public void validateLogo() {
         try {
-            helper.waitForTheElementToBeVisible(HomePageLocators_Vinay02.verifyLogo, 10);
-            asserts.verifyLogo(HomePageLocators_Vinay02.verifyLogo);
+            helper.waitForTheElementToBeVisible(PlatinumPageLocators.verifyLogo, 10);
+            asserts.verifyLogo(PlatinumPageLocators.verifyLogo);
             LoggerHandler.info("Validated logo");
             test.info("Validated logo");
             test.log(Status.PASS, "Validated logo");
@@ -53,8 +53,8 @@ public class HomePageActions_Vinay02 {
 
     public void hoverOnRings() {
         try {
-            helper.hoverOverElement(HomePageLocators_Vinay02.hoverRings);
-            helper.waitForTheElementToBeVisible(HomePageLocators_Vinay02.casualwear, 10);
+            helper.hoverOverElement(PlatinumPageLocators.hoverRings);
+            helper.waitForTheElementToBeVisible(PlatinumPageLocators.casualwear, 10);
             LoggerHandler.info("hover on Rings");
             test.info("hover on Rings");
             test.log(Status.PASS, "hover on Rings");
@@ -76,8 +76,8 @@ public class HomePageActions_Vinay02 {
 
     public void clickOnCasualWear() {
         try {
-            helper.clickOnElement(HomePageLocators_Vinay02.casualwear);
-            helper.waitForTheElementToBeVisible(HomePageLocators_Vinay02.categories, 10);
+            helper.clickOnElement(PlatinumPageLocators.casualwear);
+            helper.waitForTheElementToBeVisible(PlatinumPageLocators.categories, 10);
             LoggerHandler.info("click on casual wear");
             test.info("click on casual wear");
             test.log(Status.PASS, "click on casual wear");
@@ -120,8 +120,8 @@ public class HomePageActions_Vinay02 {
 
     public void clickOnCategories() {
         try {
-            helper.clickOnElement(HomePageLocators_Vinay02.categories);
-            helper.waitForTheElementToBeVisible(HomePageLocators_Vinay02.platinum, 10);
+            helper.clickOnElement(PlatinumPageLocators.categories);
+            helper.waitForTheElementToBeVisible(PlatinumPageLocators.platinum, 10);
             LoggerHandler.info("click on categories");
             test.info("click on categories");
             test.log(Status.PASS, "click on categories");
@@ -144,8 +144,8 @@ public class HomePageActions_Vinay02 {
 
     public void clickOnPlatinum() {
         try {
-            helper.clickOnElement(HomePageLocators_Vinay02.platinum);
-            helper.waitForTheElementToBeVisible(HomePageLocators_Vinay02.moreFilters, 10);
+            helper.clickOnElement(PlatinumPageLocators.platinum);
+            helper.waitForTheElementToBeVisible(PlatinumPageLocators.moreFilters, 10);
             LoggerHandler.info("click on platinum");
             test.info("click on platinum");
             test.log(Status.PASS, "click on platinum");
@@ -167,8 +167,8 @@ public class HomePageActions_Vinay02 {
 
     public void clickOnMoreFilters() {
         try {
-            helper.clickOnElement(HomePageLocators_Vinay02.moreFilters);
-            helper.waitForTheElementToBeVisible(HomePageLocators_Vinay02.TryAvailable, 10);
+            helper.clickOnElement(PlatinumPageLocators.moreFilters);
+            helper.waitForTheElementToBeVisible(PlatinumPageLocators.TryAvailable, 10);
             LoggerHandler.info("click on Morefilters");
             test.info("click on Morefilters");
             test.log(Status.PASS, "click on Morefilters");
@@ -191,8 +191,8 @@ public class HomePageActions_Vinay02 {
 
     public void clickOnAvailable() {
         try {
-            helper.clickOnElement(HomePageLocators_Vinay02.TryAvailable);
-            helper.waitForTheElementToBeVisible(HomePageLocators_Vinay02.yes, 10);
+            helper.clickOnElement(PlatinumPageLocators.TryAvailable);
+            helper.waitForTheElementToBeVisible(PlatinumPageLocators.yes, 10);
             LoggerHandler.info("click on Available");
             test.info("click on Available");
             test.log(Status.PASS, "click on Available");
@@ -214,8 +214,8 @@ public class HomePageActions_Vinay02 {
 
     public void clickYes() {
         try {
-            helper.clickOnElement(HomePageLocators_Vinay02.yes);
-            helper.waitForTheElementToBeVisible(HomePageLocators_Vinay02.firstproduct, 10);
+            helper.clickOnElement(PlatinumPageLocators.yes);
+            helper.waitForTheElementToBeVisible(PlatinumPageLocators.firstproduct, 10);
             LoggerHandler.info("click Yes");
             test.info("click Yes");
             test.log(Status.PASS, "click Yes");
@@ -237,8 +237,8 @@ public class HomePageActions_Vinay02 {
 
     public void clickOnFirstProduct() {
         try {
-            helper.clickOnElement(HomePageLocators_Vinay02.firstproduct);
-            helper.waitForTheElementToBeVisible(HomePageLocators_Vinay02.buynow, 10);
+            helper.clickOnElement(PlatinumPageLocators.firstproduct);
+            helper.waitForTheElementToBeVisible(PlatinumPageLocators.buynow, 10);
             LoggerHandler.info("click on firstproduct");
             test.info("click on firstproduct");
             test.log(Status.PASS, "click on firstproduct");
@@ -259,8 +259,8 @@ public class HomePageActions_Vinay02 {
 
     public void verifyProducts() {
         try {
-            asserts.verifyText(HomePageLocators_Vinay02.productcode, "Product Code");
-            helper.waitForTheElementToBeVisible(HomePageLocators_Vinay02.buynow, 10);
+            asserts.verifyText(PlatinumPageLocators.productcode, "Product Code");
+            helper.waitForTheElementToBeVisible(PlatinumPageLocators.buynow, 10);
             LoggerHandler.info("Verified products");
             test.info("Verified products");
             test.log(Status.PASS, "Verified products");
@@ -281,7 +281,7 @@ public class HomePageActions_Vinay02 {
     
     public void buyNow() {
         try {
-            helper.clickOnElement(HomePageLocators_Vinay02.buynow);
+            helper.clickOnElement(PlatinumPageLocators.buynow);
             LoggerHandler.info("clicked on buynow");
             test.info("clicked on buynow");
             test.log(Status.PASS, "clicked on buynow");
@@ -292,7 +292,7 @@ public class HomePageActions_Vinay02 {
         }
     }
     /*
-     * Method Name: test2
+     * Method Name: test6
      * Author Name: vinay
      * Description: This method executes a sequence of actions to validate the
      * purchase workflow.
@@ -300,7 +300,7 @@ public class HomePageActions_Vinay02 {
      * Parameter List: NA
      */
 
-    public void test2() {
+    public void test6() {
         validateLogo();
         hoverOnRings();
         clickOnCasualWear();
