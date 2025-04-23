@@ -2,7 +2,7 @@ package uistore;
 
 import org.openqa.selenium.By;
 
-public class HomePageLocators_Deekshitha02 {
+public class ShippingPageLocators {
     public static By aboutUs=By.xpath("(//a[text()='About us '])[1]");
     public static By whyReliance=By.xpath("(//a[text()='Why Reliance Jewels'])[1]");
     public static By certifications=By.xpath("(//a[text()='Certifications'])[1]");

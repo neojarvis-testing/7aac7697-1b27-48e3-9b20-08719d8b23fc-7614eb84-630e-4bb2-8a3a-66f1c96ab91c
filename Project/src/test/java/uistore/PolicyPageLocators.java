@@ -2,7 +2,7 @@ package uistore;
 
 import org.openqa.selenium.By;
 
-public class HomePageLocators_Shambhavi01 {
+public class PolicyPageLocators {
     public static By returnAndrefund=By.xpath("//a[text()='Return & Refund Policy']");
     public static By shippingPolicy=By.xpath("(//a[text()='Shipping Policy'])[1]");
     public static By privacyPolicy=By.xpath("(//a[text()='Privacy Policy'])[1]");
