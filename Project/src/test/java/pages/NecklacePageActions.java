@@ -14,10 +14,7 @@ public class NecklacePageActions {
     WebDriverHelper helper;
     Assertion asserts;
     ExtentTest test;
-    public NecklacePageActions(ExtentTest test) {
-        helper = new WebDriverHelper(Base.driver);
-        this.test=test;
-    }
+
     public NecklacePageActions(ExtentTest test) {
         helper = new WebDriverHelper(Base.driver);
         this.test = test;
@@ -34,11 +31,7 @@ public class NecklacePageActions {
         try {
             helper.waitForTheElementToBeVisible(NecklacePageLocators.search, 10);
             helper.clickOnElement(NecklacePageLocators.search);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-           LoggerHandler.info("clicked on search field");
+            LoggerHandler.info("clicked on search field");
             test.info("clicked on search field");
             test.log(Status.PASS, "clicked on search field");
         } catch (Exception e) {
@@ -58,22 +51,10 @@ public class NecklacePageActions {
     public void enterNecklace() {
         try {
             helper.sendKeys(NecklacePageLocators.search, "Necklace");
-            helper.enterAction(NecklacePageLocators.search);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
-    public void verifyNecklace() {
-        try {
-            asserts.verifyText(NecklacePageLocators.necklaceText, "Necklace");
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
             LoggerHandler.info("entered necklace");
             test.info("entered necklace");
             test.log(Status.PASS, "entered necklace");
+            helper.enterAction(NecklacePageLocators.search);
         } catch (Exception e) {
             LoggerHandler.error("entered necklace");
             test.fail("entered necklace");
@@ -92,10 +73,6 @@ public class NecklacePageActions {
         try {
             helper.waitForTheElementToBeVisible(NecklacePageLocators.necklace, 15);
             helper.hoverOverElement(NecklacePageLocators.necklace);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
             LoggerHandler.info("click on necklace");
             test.info("click on necklace");
             test.log(Status.PASS, "click on necklace");
@@ -117,10 +94,6 @@ public class NecklacePageActions {
         try {
             helper.waitForTheElementToBeVisible(NecklacePageLocators.quick, 10);
             helper.clickOnElement(NecklacePageLocators.quick);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
             LoggerHandler.info("click on Quick View");
             test.info("click on Quick View");
             test.log(Status.PASS, "click on Quick View");
@@ -142,17 +115,11 @@ public class NecklacePageActions {
         try {
             helper.waitForTheElementToBeVisible(NecklacePageLocators.close, 10);
             helper.clickOnElement(NecklacePageLocators.close);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
             LoggerHandler.info("click on close");
             test.info("click on close");
             test.log(Status.PASS, "click on close");
         } catch (Exception e) {
-            LoggerHandler.error("click on close");
-            test.fail("click on close");
-            test.log(Status.FAIL, "click on close");
+            e.printStackTrace();
         }
     }
 
@@ -169,17 +136,10 @@ public class NecklacePageActions {
             helper.clickOnElement(NecklacePageLocators.necklace);
             LoggerHandler.info("click on the first product");
             test.info("click on the first product");
-            test.log(Status.PASS,"click on the first product");
+            test.log(Status.PASS, "click on the first product");
         } catch (Exception e) {
             LoggerHandler.info("click on the first product");
             test.info("click on the first product");
-            test.log(Status.FAIL,"click on the first product");
-        }
-    }
-            test.log(Status.PASS, "click on the first product");
-        } catch (Exception e) {
-            LoggerHandler.error("click on the first product");
-            test.fail("click on the first product");
             test.log(Status.FAIL, "click on the first product");
         }
     }
@@ -200,15 +160,6 @@ public class NecklacePageActions {
             e.printStackTrace();
         }
     }
-            LoggerHandler.info("select gross weight");
-            test.info("select gross weight");
-            test.log(Status.PASS, "select gross weight");
-        } catch (Exception e) {
-            LoggerHandler.error("select gross weight");
-            test.fail("select gross weight");
-            test.log(Status.FAIL, "select gross weight");
-        }
-    }
 
     /*
      * Method Name: clickBuyNow()
@@ -224,30 +175,6 @@ public class NecklacePageActions {
             Screenshot.takeScreenshotWithTimestamp("My Cart");
         } catch (Exception e) {
             e.printStackTrace();
-        }
-    }
-
-    public void clickProceedToPay(){
-        try{
-            helper.waitForTheElementToBeVisible(NecklacePageLocators.pay, 10);
-            helper.clickOnElement(NecklacePageLocators.pay);
-        }
-        catch(Exception e){
-            e.printStackTrace();
-        }
-    }
-    public void test2() {
-        clickSearch();
-        enterNecklace();
-        verifyNecklace();
-            LoggerHandler.info("click on by now");
-            test.info("click on buy now");
-            test.log(Status.PASS, "click on buy now");
-            Screenshot.takeScreenshotWithTimestamp("My Cart");
-        } catch (Exception e) {
-            LoggerHandler.error("click on buy now");
-            test.fail("click on buy now");
-            test.log(Status.FAIL, "click on buy now");
         }
     }
 

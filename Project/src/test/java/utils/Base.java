@@ -1,65 +1,28 @@
 package utils;
-
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.net.MalformedURLException;
+ 
 import java.net.URL;
 import java.time.Duration;
-import java.util.Properties;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.events.EventFiringDecorator;
 import org.openqa.selenium.support.events.WebDriverListener;
-
+ 
 public class Base {
-
     public static WebDriver driver;
-    public static FileInputStream file;
-    public static Properties prop;
-
-    public void loadProperties() throws IOException {
-        String propertiesPath = System.getProperty("user.dir") + "/config/browser.properties";
-        try {
-            file = new FileInputStream(propertiesPath);
-            prop = new Properties();
-            prop.load(file);
-
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        }
-    }
-
+    public static LoadProperties loadProperties;
     public void openBrowser() {
-
         try {
-            loadProperties();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        String executionType = prop.getProperty("executiontype");
-
-        if ("remote".equalsIgnoreCase(executionType)) {
-            URL gridUrl;
-            try {
-                gridUrl = new URL(prop.getProperty("gridurl"));
-                driver = new RemoteWebDriver(gridUrl, new ChromeOptions());
-            } catch (MalformedURLException e) {
-                e.printStackTrace();
-            }
-        } else {
-            System.err.println("Invalid execution type: " + executionType);
-        }
-
-        if (driver != null)
-
-        {
+            loadProperties = new LoadProperties();
+            ChromeOptions options = new ChromeOptions();
+            driver = new RemoteWebDriver(new URL(loadProperties.getProperty("gridurl")), options);
             driver.manage().window().maximize();
-            driver.get(prop.getProperty("url"));
             driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(30));
             driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-
+            driver.get(loadProperties.getProperty("url"));
+ 
+        } catch (Exception e) {
+           LoggerHandler.info(e.getMessage());
         }
         WebDriverListener listener = new EventHandler();
         driver = new EventFiringDecorator<>(listener).decorate(driver);

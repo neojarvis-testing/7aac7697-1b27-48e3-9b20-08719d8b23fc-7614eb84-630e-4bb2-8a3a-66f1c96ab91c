@@ -140,14 +140,15 @@ public class WebDriverHelper {
             e.printStackTrace();
         }
     }
-    public void switchToiframe(By locator){
-        try{
-        WebElement frame=driver.findElement(locator);
-        driver.switchTo().frame(frame);
-    }catch(Exception e){
-        e.printStackTrace();
+
+    public void switchToiframe(By locator) {
+        try {
+            WebElement frame = driver.findElement(locator);
+            driver.switchTo().frame(frame);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
-}
 
     public void switchBackToFrame() {
         try {
@@ -157,4 +158,3 @@ public class WebDriverHelper {
         }
     }
 }
-
