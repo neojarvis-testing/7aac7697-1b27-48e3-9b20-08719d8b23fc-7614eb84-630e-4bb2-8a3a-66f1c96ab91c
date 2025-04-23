@@ -2,7 +2,7 @@ package uistore;
 
 import org.openqa.selenium.By;
 
-public class HomePageLocators_arun02 {
+public class NecklacePageLocators {
     public static By search = By.xpath("//input[@id='q']");
     public static By necklace = By.xpath("(//a[@class='srch_rslt_img productTitle'])[1]");
     public static By quick = By.xpath("(//div[@class='quicklook'])[1]//a");

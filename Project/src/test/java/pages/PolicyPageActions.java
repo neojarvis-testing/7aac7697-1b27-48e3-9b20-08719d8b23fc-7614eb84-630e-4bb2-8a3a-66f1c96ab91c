@@ -3,15 +3,15 @@ package pages;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 
-import uistore.HomePageLocators_Shambhavi01;
+import uistore.PolicyPageLocators;
 import utils.Base;
 import utils.LoggerHandler;
 import utils.WebDriverHelper;
 
-public class HomePageActions_Shambhavi01 {
+public class PolicyPageActions {
     WebDriverHelper helper;
     ExtentTest test;
-    public HomePageActions_Shambhavi01(ExtentTest test) {
+    public PolicyPageActions(ExtentTest test) {
             helper = new WebDriverHelper(Base.driver);
             this.test=test;
             
@@ -19,8 +19,8 @@ public class HomePageActions_Shambhavi01 {
 
     public void clickOnReturnRefund() {
         try {
-            helper.waitForTheElementToBeVisible(HomePageLocators_Shambhavi01.returnAndrefund, 10);
-            helper.clickOnElement(HomePageLocators_Shambhavi01.returnAndrefund);
+            helper.waitForTheElementToBeVisible(PolicyPageLocators.returnAndrefund, 10);
+            helper.clickOnElement(PolicyPageLocators.returnAndrefund);
             LoggerHandler.info("clicked on Return and Refund Policy");
             test.info("clicked on Return and Refund Policy");
             test.log(Status.PASS, "clicked on Return and Refund Policy");  
@@ -38,8 +38,8 @@ public class HomePageActions_Shambhavi01 {
 
     public void clickOnShippingPolicy() {
         try {
-            helper.waitForTheElementToBeVisible(HomePageLocators_Shambhavi01.shippingPolicy, 10);
-            helper.clickOnElement(HomePageLocators_Shambhavi01.shippingPolicy);
+            helper.waitForTheElementToBeVisible(PolicyPageLocators.shippingPolicy, 10);
+            helper.clickOnElement(PolicyPageLocators.shippingPolicy);
             LoggerHandler.info("clicked on Shipping Policy");
             test.info("clicked on Shipping Policy");
             test.log(Status.PASS, "clicked on Shipping Policy");  
@@ -54,8 +54,8 @@ public class HomePageActions_Shambhavi01 {
 
     public void clickOnPrivacyPolicy() {
         try {
-            helper.waitForTheElementToBeVisible(HomePageLocators_Shambhavi01.privacyPolicy, 10);
-            helper.clickOnElement(HomePageLocators_Shambhavi01.privacyPolicy);
+            helper.waitForTheElementToBeVisible(PolicyPageLocators.privacyPolicy, 10);
+            helper.clickOnElement(PolicyPageLocators.privacyPolicy);
             LoggerHandler.info("clicked on Privacy policy");
             test.info("clicked on Privacy policy");
             test.log(Status.PASS, "clicked on Privacy policy");  
@@ -70,8 +70,8 @@ public class HomePageActions_Shambhavi01 {
 
     public void clickOnExchange() {
         try {
-            helper.waitForTheElementToBeVisible(HomePageLocators_Shambhavi01.oldGoldExchangePolicy, 10);
-            helper.clickOnElement(HomePageLocators_Shambhavi01.oldGoldExchangePolicy);
+            helper.waitForTheElementToBeVisible(PolicyPageLocators.oldGoldExchangePolicy, 10);
+            helper.clickOnElement(PolicyPageLocators.oldGoldExchangePolicy);
             LoggerHandler.info("clicked on Old Gold Exchange Policy");
             test.info("clicked on Old Gold Exchange Policy");
             test.log(Status.PASS, "clicked on Old Gold Exchange Policy");  
@@ -86,8 +86,8 @@ public class HomePageActions_Shambhavi01 {
 
     public void clickOnfeesAndPaymentPolicy() {
         try {
-            helper.waitForTheElementToBeVisible(HomePageLocators_Shambhavi01.feesAndPaymentsPolicy, 10);
-            helper.clickOnElement(HomePageLocators_Shambhavi01.feesAndPaymentsPolicy);
+            helper.waitForTheElementToBeVisible(PolicyPageLocators.feesAndPaymentsPolicy, 10);
+            helper.clickOnElement(PolicyPageLocators.feesAndPaymentsPolicy);
             LoggerHandler.info("clicked on Fees and Payments policy");
             test.info("clicked on Fees and Payments policy");
             test.log(Status.PASS, "clicked on Fees and Payments policy");  
@@ -102,8 +102,8 @@ public class HomePageActions_Shambhavi01 {
 
     public void clickOnTermsandConditions() {
         try {
-            helper.waitForTheElementToBeVisible(HomePageLocators_Shambhavi01.termsAndConditions, 10);
-            helper.clickOnElement(HomePageLocators_Shambhavi01.termsAndConditions);
+            helper.waitForTheElementToBeVisible(PolicyPageLocators.termsAndConditions, 10);
+            helper.clickOnElement(PolicyPageLocators.termsAndConditions);
             LoggerHandler.info("clicked on Terms and Conditions");
             test.info("clicked on Terms and Conditions");
             test.log(Status.PASS, "clicked on Terms and Conditions");  
@@ -118,8 +118,8 @@ public class HomePageActions_Shambhavi01 {
 
     public void clickOnRelianceLoyalty() {
         try {
-            helper.waitForTheElementToBeVisible(HomePageLocators_Shambhavi01.relianceLoyalty, 10);
-            helper.clickOnElement(HomePageLocators_Shambhavi01.relianceLoyalty);
+            helper.waitForTheElementToBeVisible(PolicyPageLocators.relianceLoyalty, 10);
+            helper.clickOnElement(PolicyPageLocators.relianceLoyalty);
             LoggerHandler.info("clicked on RelianceOne Loyalty T & C");
             test.info("clicked on RelianceOne Loyalty T & C");
             test.log(Status.PASS, "clicked on RelianceOne Loyalty T & C");  
@@ -134,8 +134,8 @@ public class HomePageActions_Shambhavi01 {
 
     public void clickOnDisclaimer() {
         try {
-            helper.waitForTheElementToBeVisible(HomePageLocators_Shambhavi01.disclaimer, 10);
-            helper.clickOnElement(HomePageLocators_Shambhavi01.disclaimer);
+            helper.waitForTheElementToBeVisible(PolicyPageLocators.disclaimer, 10);
+            helper.clickOnElement(PolicyPageLocators.disclaimer);
             LoggerHandler.info("clicked on Disclaimer");
             test.info("clicked on Disclaimer");
             test.log(Status.PASS, "clicked on Disclaimer");  
@@ -149,7 +149,7 @@ public class HomePageActions_Shambhavi01 {
         }
     }
 
-    public void testCase9() {
+    public void test9() {
         clickOnReturnRefund();
         clickOnShippingPolicy();
         clickOnPrivacyPolicy();
