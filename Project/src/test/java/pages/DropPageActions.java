@@ -18,6 +18,8 @@ public class DropPageActions {
     public DropPageActions(ExtentTest test) {
         helper = new WebDriverHelper(Base.driver);
         asserts = new Assertion(Base.driver);
+        this.test=test;
+    }
         this.test = test;
     }
 

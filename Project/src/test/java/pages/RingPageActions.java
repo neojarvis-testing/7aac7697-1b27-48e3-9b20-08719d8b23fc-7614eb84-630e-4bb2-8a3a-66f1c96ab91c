@@ -120,8 +120,6 @@ public class RingPageActions {
             e.printStackTrace();
         }
     }
-
-=======
             LoggerHandler.info("click on gender");
             test.info("click on gender");
             test.log(Status.PASS, "click on gender");
@@ -172,7 +170,7 @@ public class RingPageActions {
             e.printStackTrace();
         }
     }
-            LoggerHandler.info("click on metal");
+          LoggerHandler.info("click on metal");
             test.info("click on metal");
             test.log(Status.PASS, "click on metal");
         } catch (Exception e) {

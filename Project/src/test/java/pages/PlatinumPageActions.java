@@ -1,5 +1,7 @@
 package pages;
-
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.Status;
+import uistore.DropsPageLocators;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.ExtentTest;
@@ -321,7 +323,6 @@ public class PlatinumPageActions {
         buyNow();
     }
 }
-=======
         public void clickOnCasualWear(){
             try {
                 helper.clickOnElement(PlatinumPageLocators.casualwear);
