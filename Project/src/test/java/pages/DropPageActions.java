@@ -20,7 +20,21 @@ public class DropPageActions {
         asserts = new Assertion(Base.driver);
         this.test=test;
     }
+        this.test = test;
+    }
 
+    /*
+     * Method Name: ValidateLogo
+     * Author Name: vinay
+     * Description: This method validates logo.
+     * Return Type: void
+     * Parameter List: NA
+     */
+    public DropPageActions(ExtentTest test) {
+        helper = new WebDriverHelper(Base.driver);
+        asserts = new Assertion(Base.driver);
+        this.test=test;
+    }
     public void validateLogo() {
         try {
             helper.waitForTheElementToBeVisible(DropsPageLocators.logoCheck, 10);
@@ -35,7 +49,13 @@ public class DropPageActions {
         }
 
     }
-
+    /*
+     * Method Name: hoverOverEarRings
+     * Author Name: vinay
+     * Description: This method performs a hover action over the "Earrings" element.
+     * Return Type: void
+     * Parameter List: NA
+     */
     public void hoverOverEarRings() {
         try {
             helper.hoverOverElement(DropsPageLocators.earRings);
@@ -50,7 +70,13 @@ public class DropPageActions {
         }
 
     }
-
+    /*
+     * Method Name: clickOnDrops
+     * Author Name: vinay
+     * Description: This method clicks on the "Drops" element.
+     * Return Type: void
+     * Parameter List: NA
+     */
     public void clickOnDrops() {
         try {
             helper.clickOnElement(DropsPageLocators.drops);
@@ -64,7 +90,13 @@ public class DropPageActions {
         }
 
     }
-
+    /*
+     * Method Name: verifyDrops
+     * Author Name: vinay
+     * Description: This method verifies if the "Drops" page is loaded.
+     * Return Type: void
+     * Parameter List: NA
+     */
     public void verifyDrops() {
         try {
             asserts.verifyUrl("Drops");
@@ -77,7 +109,13 @@ public class DropPageActions {
             test.log(Status.FAIL, "Verified Drops");
         }
     }
-
+    /*
+     * Method Name: clickOnCategories
+     * Author Name: vinay
+     * Description: This method clicks on the "Categories" element.
+     * Return Type: void
+     * Parameter List: NA
+     */
     public void clickOnCategories() {
         try {
             helper.clickOnElement(DropsPageLocators.categories);
@@ -92,7 +130,13 @@ public class DropPageActions {
         }
 
     }
-
+    /*
+     * Method Name: clickOnGold
+     * Author Name: vinay
+     * Description: This method clicks on the "Gold" category.
+     * Return Type: void
+     * Parameter List: NA
+     */
     public void clickOnGold() {
         try {
             helper.clickOnElement(DropsPageLocators.gold);
@@ -107,7 +151,13 @@ public class DropPageActions {
         }
 
     }
-
+    /*
+     * Method Name: clickOnMoreFilters
+     * Author Name: vinay
+     * Description: This method clicks on the "More Filters" option.
+     * Return Type: void
+     * Parameter List: NA
+     */
     public void clickOnMoreFilters() {
         try {
             helper.clickOnElement(DropsPageLocators.morefilters);
@@ -122,7 +172,13 @@ public class DropPageActions {
         }
 
     }
-
+    /*
+     * Method Name: clickMetalPurity
+     * Author Name: vinay
+     * Description: This method clicks on the "Metal Purity" option.
+     * Return Type: void
+     * Parameter List: NA
+     */
     public void clickMetalPurity() {
         try {
             helper.clickOnElement(DropsPageLocators.metalPurity);
@@ -137,7 +193,13 @@ public class DropPageActions {
         }
 
     }
-
+    /*
+     * Method Name: clickOn22Kt
+     * Author Name: vinay
+     * Description: This method clicks on the "22Kt Purity" option.
+     * Return Type: void
+     * Parameter List: NA
+     */
     public void clickOn22Kt() {
         try {
             helper.clickOnElement(DropsPageLocators.purity22kt);
@@ -152,7 +214,13 @@ public class DropPageActions {
         }
 
     }
-
+    /*
+     * Method Name: clickOnFirstProduct
+     * Author Name: vinay
+     * Description: This method clicks on the first product in the list.
+     * Return Type: void
+     * Parameter List: NA
+     */
     public void clickOnFirstproduct() {
         try {
             helper.clickOnElement(DropsPageLocators.firstProduct);
@@ -167,7 +235,14 @@ public class DropPageActions {
         }
 
     }
-
+    /*
+     * Method Name: verifyFeatures
+     * Author Name: vinay
+     * Description: This method verifies the key features section on the product
+     * page.
+     * Return Type: void
+     * Parameter List: NA
+     */
     public void verifyFeatures() {
         try {
             asserts.verifyText(DropsPageLocators.keyFeatures, "Key Features");
@@ -181,7 +256,14 @@ public class DropPageActions {
             test.log(Status.FAIL, "Key Features");
         }
     }
-
+    /*
+     * Method Name: clickOnBuynow
+     * Author Name: vinay
+     * Description: This method clicks on the "Buy Now" button and takes a
+     * screenshot.
+     * Return Type: void
+     * Parameter List: NA
+     */
     public void clickOnBuynow() {
         try {
             helper.clickOnElement(DropsPageLocators.buyNow);
@@ -196,7 +278,14 @@ public class DropPageActions {
         }
 
     }
-
+    /*
+     * Method Name: test5
+     * Author Name: vinay
+     * Description: This method executes a sequence of actions to validate the
+     * purchase workflow.
+     * Return Type: void
+     * Parameter List: NA
+     */
     public void test5() {
         validateLogo();
         hoverOverEarRings();

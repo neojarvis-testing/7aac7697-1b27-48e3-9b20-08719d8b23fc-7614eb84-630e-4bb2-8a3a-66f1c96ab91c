@@ -2,7 +2,6 @@ package pages;
 
 import java.time.Duration;
 import java.util.logging.Logger;
-
 import org.openqa.selenium.WebDriver;
 
 import com.aventstack.extentreports.ExtentTest;
@@ -19,7 +18,6 @@ public class VivahamPageActions {
     Assertion assertion;
     WebDriver driver;
     ExtentTest test;
-
     public VivahamPageActions(WebDriver driver, ExtentTest test) {
         webDriverHelper = new WebDriverHelper(driver);
         assertion = new Assertion(driver);
@@ -217,6 +215,7 @@ public class VivahamPageActions {
             test.log(Status.PASS, "clicked on search field");
         } catch (Exception e) {
             LoggerHandler.error("Failed to verify page title");
+            LoggerHandler.error("Faield to verify page title");
         }
 
     }
@@ -238,6 +237,7 @@ public class VivahamPageActions {
     }
 
     public void test3() {
+    public void test3(){
         verifyLogo();
         hoverWhatsTrending();
         clickVivaham();
