@@ -25,7 +25,6 @@ public class RingPageActions {
         asserts = new Assertion(Base.driver);
         this.test = test;
     }
-
     /*
      * Method Name: clickSearch()
      * Author Name: Kandula Arun Kumar
@@ -218,6 +217,10 @@ public class RingPageActions {
             helper.clickOnElement(RingPageLocators.ringProduct);
             LoggerHandler.info("click on the first product");
             test.info("click on the first product");
+            test.log(Status.PASS, "click on the first product");
+        } catch (Exception e) {
+            LoggerHandler.info("click on the first product");
+            test.info("click on the first product");
             test.log(Status.PASS,"click on the first product");
         } catch (Exception e) {
             LoggerHandler.info("click on the first product");
@@ -246,6 +249,7 @@ public class RingPageActions {
             helper.clickOnElement(RingPageLocators.cart);
             LoggerHandler.info("click on add to cart");
             test.info("click on add to cart");
+            test.log(Status.PASS, "click on add to cart");
             test.log(Status.PASS,"click on add to cart");
             Screenshot.takeScreenshotWithTimestamp("Rings");
         } catch (Exception e) {

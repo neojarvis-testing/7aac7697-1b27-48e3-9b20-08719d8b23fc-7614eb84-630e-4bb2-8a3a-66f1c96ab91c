@@ -46,7 +46,6 @@ public class Base {
                 gridUrl = new URL(prop.getProperty("gridurl"));
                 driver = new RemoteWebDriver(gridUrl, new ChromeOptions());
             } catch (MalformedURLException e) {
-
                 e.printStackTrace();
             }
         } else {

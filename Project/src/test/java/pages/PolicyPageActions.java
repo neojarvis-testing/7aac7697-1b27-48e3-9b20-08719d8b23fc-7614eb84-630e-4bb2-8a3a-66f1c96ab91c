@@ -62,7 +62,6 @@ public class PolicyPageActions {
      * Return Type: void
      * Parameter List: NA
      */
-
     public void clickOnShippingPolicy() {
         try {
             helper.waitForTheElementToBeVisible(PolicyPageLocators.shippingPolicy, 10);
@@ -188,6 +187,7 @@ public class PolicyPageActions {
      * Return Type: void
      * Parameter List: NA
      */
+
     public void clickOnRelianceLoyalty() {
         try {
             helper.waitForTheElementToBeVisible(PolicyPageLocators.relianceLoyalty, 10);

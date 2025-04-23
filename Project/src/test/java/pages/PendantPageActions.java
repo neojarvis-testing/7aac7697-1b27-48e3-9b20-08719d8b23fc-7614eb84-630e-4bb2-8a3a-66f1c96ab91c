@@ -33,7 +33,6 @@ public class PendantPageActions {
 
     public void hoverPendant() {
         try {
-=======
     public PendantPageActions(ExtentTest test) {
             helper = new WebDriverHelper(Base.driver);
             this.test=test;
@@ -355,6 +354,9 @@ public class PendantPageActions {
         clickType();
         clickCheckboxPendant();
         clickProduct();
+        clickAddToCart();
+
+    }
         priceVerification();
         clickAddToCart();
     }

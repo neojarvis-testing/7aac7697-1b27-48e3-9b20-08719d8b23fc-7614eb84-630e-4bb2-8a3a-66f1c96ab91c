@@ -214,6 +214,7 @@ public class VivahamPageActions {
             test.info("clicked on search field");
             test.log(Status.PASS, "clicked on search field");
         } catch (Exception e) {
+            LoggerHandler.error("Failed to verify page title");
             LoggerHandler.error("Faield to verify page title");
         }
 
@@ -234,6 +235,8 @@ public class VivahamPageActions {
         }
 
     }
+
+    public void test3() {
     public void test3(){
         verifyLogo();
         hoverWhatsTrending();
@@ -250,6 +253,6 @@ public class VivahamPageActions {
         clickDelhi();
         verifyDelhiPage();
         verifySortByText();
-    
-}
+
+    }
 }
