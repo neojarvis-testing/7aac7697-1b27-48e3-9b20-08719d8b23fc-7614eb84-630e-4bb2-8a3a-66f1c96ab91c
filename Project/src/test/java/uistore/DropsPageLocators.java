@@ -2,7 +2,7 @@ package uistore;
 
 import org.openqa.selenium.By;
 
-public class HomePageLocators_Vinay01 {
+public class DropsPageLocators {
     public static By logoCheck = By.xpath("//img[@src='//image.reliancejewels.com/Jewels/cms_hydrant/widgets/HS18Logo/HorizontalBannerImage_1593441799728.png']");
     public static By earRings = By.xpath("//a[text()='Earrings']");
     public static By drops = By.xpath("//a[text()='Drops']");

@@ -5,21 +5,21 @@ import org.openqa.selenium.WebDriver;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 
-import uistore.HomePageLocators_tapaswini02;
+import uistore.DiamondPageLocators;
 import utils.Assertion;
 import utils.LoggerHandler;
 import utils.Screenshot;
 import utils.WebDriverHelper;
-public class HomePageActions_tapaswini02 {
+public class DiamondPageActions {
 WebDriverHelper webDriverHelper;
 Assertion assertion;
 ExtentTest test;
-public HomePageActions_tapaswini02(WebDriver driver,ExtentTest test){
+public DiamondPageActions(WebDriver driver,ExtentTest test){
     webDriverHelper = new WebDriverHelper(driver);
     assertion = new Assertion(driver);
     this.test = test;
 }
-HomePageLocators_tapaswini02 diamondEarrings = new HomePageLocators_tapaswini02();
+DiamondPageLocators diamondEarrings = new DiamondPageLocators();
 public void verifyLogo() {
     try {
         assertion.verifyLogo(diamondEarrings.relianceJewelsLogo);
@@ -183,7 +183,7 @@ public void verifyOtherKeyword(){
         test.log(Status.FAIL, "clicked on search");
     }
 }
-public void earrings(){
+public void test4(){
     verifyLogo();
     hoverEarrings();
     clickDiamond();

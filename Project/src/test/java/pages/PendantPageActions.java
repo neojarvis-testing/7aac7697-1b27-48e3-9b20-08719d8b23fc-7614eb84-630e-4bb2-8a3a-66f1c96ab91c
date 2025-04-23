@@ -3,22 +3,22 @@ package pages;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 
-import uistore.HomePageLocators_Shambhavi02;
+import uistore.PendantPageLocators;
 import utils.Base;
 import utils.LoggerHandler;
 import utils.WebDriverHelper;
 
-public class HomePageActions_Shambhavi02 {
+public class PendantPageActions {
     ExtentTest test;
     WebDriverHelper helper;
-    public HomePageActions_Shambhavi02(ExtentTest test) {
+    public PendantPageActions(ExtentTest test) {
             helper = new WebDriverHelper(Base.driver);
             this.test=test;
     }
     public void hoverPendant(){
         try{
-            helper.waitForTheElementToBeVisible(HomePageLocators_Shambhavi02.pendants, 10);
-            helper.hoverOverElement(HomePageLocators_Shambhavi02.pendants);
+            helper.waitForTheElementToBeVisible(PendantPageLocators.pendants, 10);
+            helper.hoverOverElement(PendantPageLocators.pendants);
             LoggerHandler.info("hover on pendants");
             test.info("hover on pendants");
             test.log(Status.PASS, "hover on pendants");  
@@ -30,8 +30,8 @@ public class HomePageActions_Shambhavi02 {
     }
     public void clickGifting(){
         try{
-            helper.waitForTheElementToBeVisible(HomePageLocators_Shambhavi02.gifting, 10);
-            helper.clickOnElement(HomePageLocators_Shambhavi02.gifting);
+            helper.waitForTheElementToBeVisible(PendantPageLocators.gifting, 10);
+            helper.clickOnElement(PendantPageLocators.gifting);
             LoggerHandler.info("clicked on Gifting");
             test.info("clicked on Gifting");
             test.log(Status.PASS, "clicked on Gifting");  
@@ -44,8 +44,8 @@ public class HomePageActions_Shambhavi02 {
 
     public void clickGender(){
         try{
-            helper.waitForTheElementToBeVisible(HomePageLocators_Shambhavi02.gender, 10);
-            helper.clickOnElement(HomePageLocators_Shambhavi02.gender);
+            helper.waitForTheElementToBeVisible(PendantPageLocators.gender, 10);
+            helper.clickOnElement(PendantPageLocators.gender);
             LoggerHandler.info("clicked on Gender");
             test.info("clicked on Gender");
             test.log(Status.PASS, "clicked on Gender");  
@@ -57,8 +57,8 @@ public class HomePageActions_Shambhavi02 {
     }
     public void clickKids(){
         try{
-            helper.waitForTheElementToBeVisible(HomePageLocators_Shambhavi02.kids, 10);
-            helper.clickOnElement(HomePageLocators_Shambhavi02.kids);
+            helper.waitForTheElementToBeVisible(PendantPageLocators.kids, 10);
+            helper.clickOnElement(PendantPageLocators.kids);
             LoggerHandler.info("clicked on Kids");
             test.info("clicked on Kids");
             test.log(Status.PASS, "clicked on Kids");  
@@ -70,8 +70,8 @@ public class HomePageActions_Shambhavi02 {
     }
     public void clickFilter(){
         try{
-            helper.waitForTheElementToBeVisible(HomePageLocators_Shambhavi02.moreFilters, 10);
-            helper.clickOnElement(HomePageLocators_Shambhavi02.moreFilters);
+            helper.waitForTheElementToBeVisible(PendantPageLocators.moreFilters, 10);
+            helper.clickOnElement(PendantPageLocators.moreFilters);
             LoggerHandler.info("clicked on search field");
             test.info("clicked on search field");
             test.log(Status.PASS, "clicked on search field");  
@@ -83,8 +83,8 @@ public class HomePageActions_Shambhavi02 {
     }
     public void clickType(){
         try{
-            helper.waitForTheElementToBeVisible(HomePageLocators_Shambhavi02.type, 10);
-            helper.clickOnElement(HomePageLocators_Shambhavi02.type);
+            helper.waitForTheElementToBeVisible(PendantPageLocators.type, 10);
+            helper.clickOnElement(PendantPageLocators.type);
             LoggerHandler.info("clicked on search field");
             test.info("clicked on search field");
             test.log(Status.PASS, "clicked on search field");  
@@ -96,8 +96,8 @@ public class HomePageActions_Shambhavi02 {
     }
     public void clickCheckboxPendant(){
         try{
-            helper.waitForTheElementToBeVisible(HomePageLocators_Shambhavi02.checkBoxPendant, 10);
-            helper.clickOnElement(HomePageLocators_Shambhavi02.checkBoxPendant);
+            helper.waitForTheElementToBeVisible(PendantPageLocators.checkBoxPendant, 10);
+            helper.clickOnElement(PendantPageLocators.checkBoxPendant);
             LoggerHandler.info("clicked on search field");
             test.info("clicked on search field");
             test.log(Status.PASS, "clicked on search field");  
@@ -109,8 +109,8 @@ public class HomePageActions_Shambhavi02 {
     }
     public void clickProduct(){
         try{
-            helper.waitForTheElementToBeVisible(HomePageLocators_Shambhavi02.firstProduct, 10);
-            helper.clickOnElement(HomePageLocators_Shambhavi02.firstProduct);
+            helper.waitForTheElementToBeVisible(PendantPageLocators.firstProduct, 10);
+            helper.clickOnElement(PendantPageLocators.firstProduct);
             LoggerHandler.info("click on the first product");
             test.info("click on the first product");
             test.log(Status.PASS, "click on the first product");  
@@ -122,8 +122,8 @@ public class HomePageActions_Shambhavi02 {
     }
     public void clickAddToCart(){
         try{
-            helper.waitForTheElementToBeVisible(HomePageLocators_Shambhavi02.addToCart, 10);
-            helper.clickOnElement(HomePageLocators_Shambhavi02.addToCart);
+            helper.waitForTheElementToBeVisible(PendantPageLocators.addToCart, 10);
+            helper.clickOnElement(PendantPageLocators.addToCart);
             LoggerHandler.info("clicked on search field");
             test.info("clicked on search field");
             test.log(Status.PASS, "clicked on search field");
@@ -134,7 +134,7 @@ public class HomePageActions_Shambhavi02 {
             test.log(Status.FAIL, "clicked on search");
         }
     }
-    public void testCase10(){
+    public void test10(){
         hoverPendant();
         clickGifting();
         clickGender();
