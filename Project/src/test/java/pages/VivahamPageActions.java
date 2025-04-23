@@ -8,25 +8,26 @@ import org.openqa.selenium.WebDriver;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 
-import uistore.HomePageLocators_tapaswini01;
+import uistore.VivahamPageLocators;
 import utils.Assertion;
 import utils.LoggerHandler;
 import utils.Screenshot;
 import utils.WebDriverHelper;
 
-public class HomePageActions_tapaswini01 {
+public class VivahamPageActions {
     WebDriverHelper webDriverHelper;
     Assertion assertion;
     WebDriver driver;
     ExtentTest test;
-    public HomePageActions_tapaswini01(WebDriver driver, ExtentTest test) {
+
+    public VivahamPageActions(WebDriver driver, ExtentTest test) {
         webDriverHelper = new WebDriverHelper(driver);
         assertion = new Assertion(driver);
         this.driver = driver;
         this.test = test;
     }
 
-    HomePageLocators_tapaswini01 homePageLocatorsVivaham = new HomePageLocators_tapaswini01();
+    VivahamPageLocators homePageLocatorsVivaham = new VivahamPageLocators();
 
     public void verifyLogo() {
         try {
@@ -215,7 +216,7 @@ public class HomePageActions_tapaswini01 {
             test.info("clicked on search field");
             test.log(Status.PASS, "clicked on search field");
         } catch (Exception e) {
-            LoggerHandler.error("Faield to verify page title");
+            LoggerHandler.error("Failed to verify page title");
         }
 
     }
@@ -235,7 +236,8 @@ public class HomePageActions_tapaswini01 {
         }
 
     }
-    public void vivaham(){
+
+    public void test3() {
         verifyLogo();
         hoverWhatsTrending();
         clickVivaham();
@@ -251,6 +253,6 @@ public class HomePageActions_tapaswini01 {
         clickDelhi();
         verifyDelhiPage();
         verifySortByText();
-    
-}
+
+    }
 }

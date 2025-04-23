@@ -3,19 +3,19 @@ package pages;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 
-import uistore.HomePageLocators_Vinay01;
+import uistore.DropsPageLocators;
 import utils.Assertion;
 import utils.Base;
 import utils.LoggerHandler;
 import utils.Screenshot;
 import utils.WebDriverHelper;
 
-public class HomePageActions_Vinay01 {
+public class DropPageActions {
 
     WebDriverHelper helper;
     Assertion asserts;
     ExtentTest test;
-    public HomePageActions_Vinay01(ExtentTest test) {
+    public DropPageActions(ExtentTest test) {
         helper = new WebDriverHelper(Base.driver);
         asserts = new Assertion(Base.driver);
         this.test=test;
@@ -23,8 +23,8 @@ public class HomePageActions_Vinay01 {
 
     public void validateLogo() {
         try {
-            helper.waitForTheElementToBeVisible(HomePageLocators_Vinay01.logoCheck, 10);
-            asserts.verifyLogo(HomePageLocators_Vinay01.logoCheck);
+            helper.waitForTheElementToBeVisible(DropsPageLocators.logoCheck, 10);
+            asserts.verifyLogo(DropsPageLocators.logoCheck);
             LoggerHandler.info("Validated logo");
             test.info("Validated logo");
             test.log(Status.PASS, "Validated logo");
@@ -38,8 +38,8 @@ public class HomePageActions_Vinay01 {
 
     public void hoverOverEarRings() {
         try {
-            helper.hoverOverElement(HomePageLocators_Vinay01.earRings);
-            helper.waitForTheElementToBeVisible(HomePageLocators_Vinay01.drops, 10);
+            helper.hoverOverElement(DropsPageLocators.earRings);
+            helper.waitForTheElementToBeVisible(DropsPageLocators.drops, 10);
             LoggerHandler.info("Hovered on Earrings");
             test.info("Hovered on Earrings");
             test.log(Status.PASS, "Hovered on Earrings");
@@ -53,7 +53,7 @@ public class HomePageActions_Vinay01 {
 
     public void clickOnDrops() {
         try {
-            helper.clickOnElement(HomePageLocators_Vinay01.drops);
+            helper.clickOnElement(DropsPageLocators.drops);
             LoggerHandler.info("clicked on Drops");
             test.info("clicked on Drops");
             test.log(Status.PASS, "clicked on Drops");
@@ -80,8 +80,8 @@ public class HomePageActions_Vinay01 {
 
     public void clickOnCategories() {
         try {
-            helper.clickOnElement(HomePageLocators_Vinay01.categories);
-            helper.waitForTheElementToBeVisible(HomePageLocators_Vinay01.gold, 10);
+            helper.clickOnElement(DropsPageLocators.categories);
+            helper.waitForTheElementToBeVisible(DropsPageLocators.gold, 10);
             LoggerHandler.info("clicked on categories");
             test.info("clicked on categories");
             test.log(Status.PASS, "clicked on categories");
@@ -95,8 +95,8 @@ public class HomePageActions_Vinay01 {
 
     public void clickOnGold() {
         try {
-            helper.clickOnElement(HomePageLocators_Vinay01.gold);
-            helper.waitForTheElementToBeVisible(HomePageLocators_Vinay01.morefilters, 10);
+            helper.clickOnElement(DropsPageLocators.gold);
+            helper.waitForTheElementToBeVisible(DropsPageLocators.morefilters, 10);
             LoggerHandler.info("clicked on Gold");
             test.info("clicked on Gold");
             test.log(Status.PASS, "clicked on Gold");
@@ -110,8 +110,8 @@ public class HomePageActions_Vinay01 {
 
     public void clickOnMoreFilters() {
         try {
-            helper.clickOnElement(HomePageLocators_Vinay01.morefilters);
-            helper.waitForTheElementToBeVisible(HomePageLocators_Vinay01.metalPurity, 10);
+            helper.clickOnElement(DropsPageLocators.morefilters);
+            helper.waitForTheElementToBeVisible(DropsPageLocators.metalPurity, 10);
             LoggerHandler.info("clicked on more filters");
             test.info("clicked on more filters");
             test.log(Status.PASS, "clicked on more filters");
@@ -125,8 +125,8 @@ public class HomePageActions_Vinay01 {
 
     public void clickMetalPurity() {
         try {
-            helper.clickOnElement(HomePageLocators_Vinay01.metalPurity);
-            helper.waitForTheElementToBeVisible(HomePageLocators_Vinay01.purity22kt, 10);
+            helper.clickOnElement(DropsPageLocators.metalPurity);
+            helper.waitForTheElementToBeVisible(DropsPageLocators.purity22kt, 10);
             LoggerHandler.info("clicked on Metalpurity");
             test.info("clicked on search Metalpurity");
             test.log(Status.PASS, "clicked on Metalpurity");
@@ -140,8 +140,8 @@ public class HomePageActions_Vinay01 {
 
     public void clickOn22Kt() {
         try {
-            helper.clickOnElement(HomePageLocators_Vinay01.purity22kt);
-            helper.waitForTheElementToBeVisible(HomePageLocators_Vinay01.firstProduct, 10);
+            helper.clickOnElement(DropsPageLocators.purity22kt);
+            helper.waitForTheElementToBeVisible(DropsPageLocators.firstProduct, 10);
             LoggerHandler.info("clicked on 22kt");
             test.info("clicked on search 22kt");
             test.log(Status.PASS, "clicked on 22kt");
@@ -155,8 +155,8 @@ public class HomePageActions_Vinay01 {
 
     public void clickOnFirstproduct() {
         try {
-            helper.clickOnElement(HomePageLocators_Vinay01.firstProduct);
-            helper.waitForTheElementToBeVisible(HomePageLocators_Vinay01.keyFeatures, 10);
+            helper.clickOnElement(DropsPageLocators.firstProduct);
+            helper.waitForTheElementToBeVisible(DropsPageLocators.keyFeatures, 10);
             LoggerHandler.info("clicked on first product");
             test.info("clicked on first product");
             test.log(Status.PASS, "clicked on first product");
@@ -170,8 +170,8 @@ public class HomePageActions_Vinay01 {
 
     public void verifyFeatures() {
         try {
-            asserts.verifyText(HomePageLocators_Vinay01.keyFeatures, "Key Features");
-            helper.waitForTheElementToBeVisible(HomePageLocators_Vinay01.buyNow, 10);
+            asserts.verifyText(DropsPageLocators.keyFeatures, "Key Features");
+            helper.waitForTheElementToBeVisible(DropsPageLocators.buyNow, 10);
             LoggerHandler.info("Key Features");
             test.info("Key Features");
             test.log(Status.PASS, "Key Features");
@@ -184,7 +184,7 @@ public class HomePageActions_Vinay01 {
 
     public void clickOnBuynow() {
         try {
-            helper.clickOnElement(HomePageLocators_Vinay01.buyNow);
+            helper.clickOnElement(DropsPageLocators.buyNow);
             Screenshot.takeScreenshotWithTimestamp("reliancejewels");
             LoggerHandler.info("clicked on Buynow");
             test.info("clicked on Buynow");
@@ -197,7 +197,7 @@ public class HomePageActions_Vinay01 {
 
     }
 
-    public void test1() {
+    public void test5() {
         validateLogo();
         hoverOverEarRings();
         clickOnDrops();

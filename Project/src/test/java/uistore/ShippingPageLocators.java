@@ -2,8 +2,7 @@ package uistore;
 
 import org.openqa.selenium.By;
 
-public class HomePageLocators_Deekshitha02 {
-    public static By aboutUs=By.xpath("(//a[text()='About us '])[1]");
+public class ShippingPageLocators {
     public static By whyReliance=By.xpath("(//a[text()='Why Reliance Jewels'])[1]");
     public static By certifications=By.xpath("(//a[text()='Certifications'])[1]");
     public static By ourShowRooms=By.xpath("(//a[text()='Our Showrooms'])[1]");
@@ -12,4 +11,5 @@ public class HomePageLocators_Deekshitha02 {
     public static By faqs=By.xpath("(//a[text()='FAQs'])[1]");
     public static By trackAnOrder=By.xpath("(//a[text()='Track An Order'])[1]");
     public static By fastShipping=By.xpath("(//a[text()='Fast Shipping'])[1]");
+    public static By aboutUs = By.xpath("(//div[@class='text-center']//h1)[1]");
 }
