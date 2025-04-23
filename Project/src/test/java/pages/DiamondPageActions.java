@@ -4,7 +4,7 @@ import org.openqa.selenium.WebDriver;
 
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
-
+import uistore.DiamongPageLocators;
 import uistore.DiamondPageLocators;
 import utils.Assertion;
 import utils.LoggerHandler;
@@ -19,6 +19,7 @@ public DiamondPageActions(WebDriver driver,ExtentTest test){
     assertion = new Assertion(driver);
     this.test = test;
 }
+
 DiamondPageLocators diamondEarrings = new DiamondPageLocators();
 
 /*
@@ -28,6 +29,8 @@ DiamondPageLocators diamondEarrings = new DiamondPageLocators();
    * Return Type: void
 * Parameter List: NA
 */
+DiamongPageLocators diamondEarrings = new DiamongPageLocators();
+DiamondPageLocators diamondEarrings = new DiamondPageLocators();
 public void verifyLogo() {
     try {
         assertion.verifyLogo(diamondEarrings.relianceJewelsLogo);
@@ -49,6 +52,16 @@ public void verifyLogo() {
    * Return Type: void
 * Parameter List: NA
 */
+        test.info("clicked on search field");
+        test.log(Status.PASS, "clicked on search field");
+
+    } catch (Exception e) {
+        LoggerHandler.error("Failed to verify logo");
+        test.fail("clicked on search field");
+        test.log(Status.FAIL, "clicked on search");
+
+    }
+}
 public void hoverEarrings(){
     try{
         webDriverHelper.hoverOverElement(diamondEarrings.earrringsText);
@@ -90,6 +103,29 @@ public void clickDiamond(){
    * Return Type: void
 * Parameter List: NA
 */
+        test.info("clicked on search field");
+        test.log(Status.PASS, "clicked on search field");
+    }
+    catch(Exception e){
+        LoggerHandler.error("failed to hover earrings");
+        test.fail("clicked on search field");
+        test.log(Status.FAIL, "clicked on search");
+
+    }
+}
+public void clickDiamond(){
+    try{
+        webDriverHelper.clickOnElement(diamondEarrings.diamondText);
+        LoggerHandler.info("clicked on diamond");
+        test.info("clicked on search field");
+        test.log(Status.PASS, "clicked on search field");
+    }
+    catch(Exception e){
+        LoggerHandler.error("failed to click on diamond");
+        test.fail("clicked on search field");
+        test.log(Status.FAIL, "clicked on search");
+    }
+}
 public void verifyDiamondText(){
     try{
         Thread.sleep(3000);
@@ -131,6 +167,29 @@ public void clickGender(){
    * Return Type: void
 * Parameter List: NA
 */
+        LoggerHandler.info("verified diamond text");
+        test.info("clicked on search field");
+        test.log(Status.PASS, "clicked on search field");
+    }
+    catch(Exception e){
+        LoggerHandler.error("faield to verify diamond text");
+        test.fail("clicked on search field");
+        test.log(Status.FAIL, "clicked on search");
+    }
+}
+public void clickGender(){
+    try{
+        webDriverHelper.clickOnElement(diamondEarrings.genderText);
+        LoggerHandler.info("clicked on gender");
+        test.info("clicked on search field");
+        test.log(Status.PASS, "clicked on search field");
+    }
+    catch(Exception e){
+        LoggerHandler.error("failed to click on gender");
+        test.fail("clicked on search field");
+        test.log(Status.FAIL, "clicked on search");
+    }
+}
 public void clickWomen(){
     try{
         webDriverHelper.waitForTheElementToBeVisible(diamondEarrings.womenDiamond,10);
@@ -212,6 +271,55 @@ public void clickFirstProduct(){
    * Return Type: void
 * Parameter List: NA
 */
+        LoggerHandler.info("clicked on women");
+        test.info("clicked on search field");
+        test.log(Status.PASS, "clicked on search field");
+    }
+    catch(Exception e){
+        LoggerHandler.error("failed to click on women");
+        test.fail("clicked on search field");
+        test.log(Status.FAIL, "clicked on search");
+    }
+}
+public void hoverPopularity(){
+    try{
+        webDriverHelper.hoverOverElement(diamondEarrings.popularityButton);
+        LoggerHandler.info("hovered over popularity");
+        test.info("clicked on search field");
+        test.log(Status.PASS, "clicked on search field");
+    }
+    catch(Exception e){
+        LoggerHandler.error("falied to hover over popularity");
+        test.fail("clicked on search field");
+        test.log(Status.FAIL, "clicked on search");
+    }
+}
+public void clickNewArrivals(){
+    try{
+        webDriverHelper.clickOnElement(diamondEarrings.newArrivals);
+        LoggerHandler.info("clicked on new arrivals");
+        test.info("clicked on search field");
+        test.log(Status.PASS, "clicked on search field");
+    }
+    catch(Exception e){
+        LoggerHandler.error("failed to click on new arrivals");
+        test.fail("clicked on search field");
+        test.log(Status.FAIL, "clicked on search");
+    }
+}
+public void clickFirstProduct(){
+    try{
+        webDriverHelper.clickOnElement(diamondEarrings.firstProduct);
+        LoggerHandler.info("clicked on first product");
+        test.info("clicked on search field");
+        test.log(Status.PASS, "clicked on search field");
+    }
+    catch(Exception e){
+        LoggerHandler.error("fail to click on first product");
+        test.fail("clicked on search field");
+        test.log(Status.FAIL, "clicked on search");
+    }
+}
 public void verifyKeywordEarrings(){
     try{
         Thread.sleep(3000);
@@ -253,6 +361,29 @@ public void clickAddToCart(){
    * Return Type: void
 * Parameter List: NA
 */
+        LoggerHandler.info("verified keyword earrings");
+        test.info("clicked on search field");
+        test.log(Status.PASS, "clicked on search field");
+    }
+    catch(Exception e){
+        LoggerHandler.error("failed to verify earrings keyword");
+        test.fail("clicked on search field");
+        test.log(Status.FAIL, "clicked on search");
+    }
+}
+public void clickAddToCart(){
+    try{
+        webDriverHelper.clickOnElement(diamondEarrings.addToCart);
+        LoggerHandler.info("clicked on add to cart");
+        test.info("clicked on search field");
+        test.log(Status.PASS, "clicked on search field");
+    }
+    catch(Exception e){
+        LoggerHandler.error("failed to click on add to cart");
+        test.fail("clicked on search field");
+        test.log(Status.FAIL, "clicked on search");
+    }
+}
 public void verifyOtherKeyword(){
     try{
         Thread.sleep(3000);
@@ -275,6 +406,15 @@ public void verifyOtherKeyword(){
    * Return Type: void
 * Parameter List: NA
 */
+        test.info("clicked on search field");
+        test.log(Status.PASS, "clicked on search field");
+    }
+    catch(Exception e){
+        LoggerHandler.error("failed to verify other keyword");
+        test.fail("clicked on search field");
+        test.log(Status.FAIL, "clicked on search");
+    }
+}
 public void test4(){
     verifyLogo();
     hoverEarrings();

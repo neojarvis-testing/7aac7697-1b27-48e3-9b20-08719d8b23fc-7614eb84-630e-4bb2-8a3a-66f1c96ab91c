@@ -12,4 +12,5 @@ public class ShippingPageLocators {
     public static By faqs=By.xpath("(//a[text()='FAQs'])[1]");
     public static By trackAnOrder=By.xpath("(//a[text()='Track An Order'])[1]");
     public static By fastShipping=By.xpath("(//a[text()='Fast Shipping'])[1]");
+    public static By aboutUs = By.xpath("(//div[@class='text-center']//h1)[1]");
 }

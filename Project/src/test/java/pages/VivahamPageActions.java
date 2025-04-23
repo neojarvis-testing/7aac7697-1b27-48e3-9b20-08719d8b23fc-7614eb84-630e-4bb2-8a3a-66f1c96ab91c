@@ -2,7 +2,6 @@ package pages;
 
 import java.time.Duration;
 import java.util.logging.Logger;
-
 import org.openqa.selenium.WebDriver;
 
 import com.aventstack.extentreports.ExtentTest;
@@ -27,7 +26,6 @@ public class VivahamPageActions {
     }
 
     VivahamPageLocators homePageLocatorsVivaham = new VivahamPageLocators();
-
      /*
    * Method Name: verifyLogo
    * Author Name: tapaswini
@@ -35,7 +33,6 @@ public class VivahamPageActions {
    * Return Type: void
 * Parameter List: NA
 */
- 
     public void verifyLogo() {
         try {
             assertion.verifyLogo(homePageLocatorsVivaham.relianceJewelsLogo);
@@ -55,6 +52,15 @@ public class VivahamPageActions {
    * Return Type: void
 * Parameter List: NA
 */
+            test.info("clicked on search field");
+            test.log(Status.PASS, "clicked on search field");
+        } catch (Exception e) {
+            LoggerHandler.error("Reliance Jewels logo verification failed");
+            test.fail("clicked on search field");
+            test.log(Status.FAIL, "clicked on search");
+        }
+    }
+
     public void hoverWhatsTrending() {
         try {
             webDriverHelper.hoverOverElement(homePageLocatorsVivaham.whatsTrendingtext);
@@ -94,6 +100,29 @@ public class VivahamPageActions {
    * Return Type: void
 * Parameter List: NA
 */
+            test.info("clicked on search field");
+            test.log(Status.PASS, "clicked on search field");
+        } catch (Exception e) {
+            LoggerHandler.error("Failed to hover on What's trending");
+            test.fail("clicked on search field");
+            test.log(Status.FAIL, "clicked on search");
+        }
+    }
+
+    public void clickVivaham() {
+        try {
+            webDriverHelper.clickOnElement(homePageLocatorsVivaham.vivaham);
+            LoggerHandler.info("Clicked on Vivaham");
+            test.info("clicked on search field");
+            test.log(Status.PASS, "clicked on search field");
+        } catch (Exception e) {
+            e.printStackTrace();
+            LoggerHandler.error("Failed to click on vivaham");
+            test.fail("clicked on search field");
+            test.log(Status.FAIL, "clicked on search");
+        }
+    }
+
     public void verifyUrlVivaham() {
         try {
             assertion.verifyUrl("VIVAHAM");
@@ -113,6 +142,15 @@ public class VivahamPageActions {
    * Return Type: void
 * Parameter List: NA
 */
+            test.info("clicked on search field");
+            test.log(Status.PASS, "clicked on search field");
+        } catch (Exception e) {
+            LoggerHandler.error("Vivaham url verification failed");
+            test.fail("clicked on search field");
+            test.log(Status.FAIL, "clicked on search");
+        }
+    }
+
     public void clickLocateAStore() {
         try {
             webDriverHelper.clickAndswitchForward(homePageLocatorsVivaham.locateAStore);
@@ -151,6 +189,28 @@ public class VivahamPageActions {
    * Return Type: void
 * Parameter List: NA
 */
+            test.info("clicked on search field");
+            test.log(Status.PASS, "clicked on search field");
+        } catch (Exception e) {
+            LoggerHandler.error("Failed to click on a store and failed to switch window");
+            test.fail("clicked on search field");
+            test.log(Status.FAIL, "clicked on search");
+        }
+    }
+
+    public void storeListPageVerify() {
+        try {
+            // Thread.sleep(3000);
+            assertion.verifyTitle("Reliance jewels store locator");
+            LoggerHandler.info("Reliance jewels store locator title verified");
+            test.info("clicked on search field");
+            test.log(Status.PASS, "clicked on search field");
+        } catch (Exception e) {
+            LoggerHandler.error("Reliance jewels store locator title verified");
+            test.fail("clicked on search field");
+            test.log(Status.FAIL, "clicked on search");
+        }
+    }
     public void selectState() {
         try {
             webDriverHelper.selectDropDown(homePageLocatorsVivaham.stateDropdown, "Andhra Pradesh");
@@ -170,6 +230,15 @@ public class VivahamPageActions {
    * Return Type: void
 * Parameter List: NA
 */
+            test.info("clicked on search field");
+            test.log(Status.PASS, "clicked on search field");
+        } catch (Exception e) {
+            LoggerHandler.error("Failed to select Andhra pradesh");
+            test.fail("clicked on search field");
+            test.log(Status.FAIL, "clicked on search");
+        }
+    }
+
     public void selectCity() {
         try {
             webDriverHelper.selectDropDown(homePageLocatorsVivaham.cityDropdown, "Guntur");
@@ -189,10 +258,20 @@ public class VivahamPageActions {
    * Return Type: void
 * Parameter List: NA
 */
+            test.info("clicked on search field");
+            test.log(Status.PASS, "clicked on search field");
+        } catch (Exception e) {
+            LoggerHandler.error("Failed to select Guntur");
+            test.fail("clicked on search field");
+            test.log(Status.FAIL, "clicked on search");
+        }
+    }
+
     public void verifyStoreLocatorUrl() {
         try {
             assertion.verifyUrl("storelocator");
             LoggerHandler.info("Verified store locator url");
+
             test.info("Verified store locator url");
             test.log(Status.PASS, "Verified store locator url");
         } catch (Exception e) {
@@ -208,6 +287,14 @@ public class VivahamPageActions {
    * Return Type: void
 * Parameter List: NA
 */
+            test.info("clicked on search field");
+            test.log(Status.PASS, "clicked on search field");
+        } catch (Exception e) {
+            LoggerHandler.error(("Failed to verify store locator url"));
+            test.fail("clicked on search field");
+            test.log(Status.FAIL, "clicked on search");
+        }
+    }
     public void clickSearch() {
         try {
             LoggerHandler.info("Clicked on search");
@@ -228,6 +315,16 @@ public class VivahamPageActions {
    * Return Type: void
 * Parameter List: NA
 */
+            test.info("clicked on search field");
+            test.log(Status.PASS, "clicked on search field");
+        } catch (Exception e) {
+            LoggerHandler.error("Failed to click on search");
+            test.fail("clicked on search field");
+            test.log(Status.FAIL, "clicked on search");
+        }
+
+    }
+
     public void switchToMainWindow() {
         try {
             driver.close();
@@ -249,6 +346,15 @@ public class VivahamPageActions {
    * Return Type: void
 * Parameter List: NA
 */
+            test.info("clicked on search field");
+            test.log(Status.PASS, "clicked on search field");
+        } catch (Exception e) {
+            LoggerHandler.error("Failed to switch to main window");
+            test.fail("clicked on search field");
+            test.log(Status.FAIL, "clicked on search");
+        }
+
+    }
     public void scrollToDelhiText() {
         try {
             webDriverHelper.scrollByElement(homePageLocatorsVivaham.delhiText);
@@ -272,6 +378,19 @@ public class VivahamPageActions {
 */
     public void clickDelhi() {
         try {
+            test.info("clicked on search field");
+            test.log(Status.PASS, "clicked on search field");
+        } catch (Exception e) {
+            LoggerHandler.error("Failed to scroll to Delhi text");
+            test.fail("clicked on search field");
+            test.log(Status.FAIL, "clicked on search");
+        }
+
+    }
+
+    public void clickDelhi() {
+        try {
+            // Thread.sleep(3000);
             driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
             webDriverHelper.waitForTheElementToBeVisible(homePageLocatorsVivaham.delhiText, 10);
             webDriverHelper.clickAndswitchForward(homePageLocatorsVivaham.delhiText);
@@ -292,6 +411,14 @@ public class VivahamPageActions {
    * Return Type: void
 * Parameter List: NA
 */
+            test.info("clicked on search field");
+            test.log(Status.PASS, "clicked on search field");
+        } catch (Exception e) {
+            LoggerHandler.error("Failed to click on delhi");
+            test.fail("clicked on search field");
+            test.log(Status.FAIL, "clicked on search");
+        }
+    }
     public void verifyDelhiPage() {
         try {
             assertion.verifyTitle("delhi");
@@ -312,6 +439,16 @@ public class VivahamPageActions {
    * Return Type: void
 * Parameter List: NA
 */
+
+            test.info("clicked on search field");
+            test.log(Status.PASS, "clicked on search field");
+        } catch (Exception e) {
+            LoggerHandler.error("Failed to verify page title");
+            LoggerHandler.error("Faield to verify page title");
+        }
+
+    }
+
     public void verifySortByText() {
         try {
             assertion.verifyText(homePageLocatorsVivaham.sortBy, "Sort by");
@@ -332,6 +469,18 @@ public class VivahamPageActions {
    * Return Type: void
 * Parameter List: NA
 */
+            LoggerHandler.info("Verified Sort by text");
+            test.info("clicked on search field");
+            test.log(Status.PASS, "clicked on search field");
+        } catch (Exception e) {
+            LoggerHandler.error("Failed to veriify Sort by text");
+            test.fail("clicked on search field");
+            test.log(Status.FAIL, "clicked on search");
+        }
+
+    }
+
+    public void test3() {
     public void test3(){
         verifyLogo();
         hoverWhatsTrending();
@@ -348,6 +497,8 @@ public class VivahamPageActions {
         clickDelhi();
         verifyDelhiPage();
         verifySortByText();
+
     
 }
+    }
 }
