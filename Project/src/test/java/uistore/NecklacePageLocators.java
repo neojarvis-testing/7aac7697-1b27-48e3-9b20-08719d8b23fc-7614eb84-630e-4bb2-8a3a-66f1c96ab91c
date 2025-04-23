@@ -10,5 +10,6 @@ public class NecklacePageLocators {
     public static By close = By.xpath("//a[@class='fancybox-item fancybox-close']");
     public static By buy = By.xpath("(//a[@id='btnBuyNow'])[2]");
     public static By necklaceText = By.xpath("//span[@id='breadcrumbNavigationLast']");
+    public static By necklaceText = By.xpath("//ul//li[2]//span[@id='breadcrumbNavigationLast']");
     public static By pay = By.xpath("//a[@id='proceedToPayButton']");
 }
