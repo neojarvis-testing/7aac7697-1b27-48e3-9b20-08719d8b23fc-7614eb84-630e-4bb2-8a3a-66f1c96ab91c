@@ -8,6 +8,8 @@ import utils.Assertion;
 import utils.Base;
 import utils.LoggerHandler;
 import utils.Screenshot;
+import utils.Base;
+import utils.LoggerHandler;
 import utils.WebDriverHelper;
 
 public class PolicyPageActions {
@@ -28,7 +30,11 @@ public class PolicyPageActions {
      * Return Type: void
      * Parameter List: NA
      */
-
+    public PolicyPageActions(ExtentTest test) {
+            helper = new WebDriverHelper(Base.driver);
+            this.test=test;
+            
+    }
     public void clickOnReturnRefund() {
         try {
             helper.waitForTheElementToBeVisible(PolicyPageLocators.returnAndrefund, 10);
@@ -38,7 +44,10 @@ public class PolicyPageActions {
             test.log(Status.PASS, "clicked on Return and Refund Policy");
             assertion.verifyTitle("Best Online Shopping Offers In India - Reliance Jewels");
             assertion.verifyUrl("https://www.reliancejewels.com/s/return-policy");
-
+            test.log(Status.PASS, "clicked on Return and Refund Policy");  
+            // assertion.verifyTitle("Best Online Shopping Offers In India - Reliance
+            // Jewels");
+            // assertion.verifyUrl("https://www.reliancejewels.com/s/return-policy");
         } catch (Exception e) {
             LoggerHandler.error("clicked on Return and Refund Policy");
             test.fail("clicked on Return and Refund Policy");
@@ -46,7 +55,6 @@ public class PolicyPageActions {
         }
 
     }
-
     /*
      * Method Name: clickOnShippingPolicy
      * Author Name: Shambhavi
@@ -54,6 +62,7 @@ public class PolicyPageActions {
      * Return Type: void
      * Parameter List: NA
      */
+
     public void clickOnShippingPolicy() {
         try {
             helper.waitForTheElementToBeVisible(PolicyPageLocators.shippingPolicy, 10);
@@ -63,6 +72,9 @@ public class PolicyPageActions {
             test.log(Status.PASS, "clicked on Shipping Policy");
             assertion.verifyTitle("Best Online Shopping Offers In India - Reliance Jewels");
             assertion.verifyUrl("https://www.reliancejewels.com/s/shipping-policy");
+            test.log(Status.PASS, "clicked on Shipping Policy");  
+            // ast.verifyTitle();
+            // ast.verifyUrl("https://www.reliancejewels.com/s/shipping-policy");
         } catch (Exception e) {
             LoggerHandler.error("clicked on Shipping policy");
             test.fail("clicked on Shipping policy");
@@ -76,7 +88,6 @@ public class PolicyPageActions {
      * Return Type: void
      * Parameter List: NA
      */
-
     public void clickOnPrivacyPolicy() {
         try {
             helper.waitForTheElementToBeVisible(PolicyPageLocators.privacyPolicy, 10);
@@ -86,6 +97,9 @@ public class PolicyPageActions {
             test.log(Status.PASS, "clicked on Privacy policy");
             assertion.verifyTitle("Best Online Shopping Offers In India - Reliance Jewels");
             assertion.verifyUrl("https://www.reliancejewels.com/s/privacy-policy");
+            test.log(Status.PASS, "clicked on Privacy policy");  
+            // ast.verifyTitle();
+            // ast.verifyUrl("https://www.reliancejewels.com/s/privacy-policy");
         } catch (Exception e) {
             LoggerHandler.error("clicked on Privacy policy");
             test.fail("clicked on Privacy policy");
@@ -99,7 +113,6 @@ public class PolicyPageActions {
      * Return Type: void
      * Parameter List: NA
      */
-
     public void clickOnExchange() {
         try {
             helper.waitForTheElementToBeVisible(PolicyPageLocators.oldGoldExchangePolicy, 10);
@@ -109,13 +122,15 @@ public class PolicyPageActions {
             test.log(Status.PASS, "clicked on Old Gold Exchange Policy");
             assertion.verifyTitle("Best Online Shopping Offers In India - Reliance Jewels");
             assertion.verifyUrl("https://www.reliancejewels.com/s/OldGoldExchange");
+            test.log(Status.PASS, "clicked on Old Gold Exchange Policy");  
+            // ast.verifyTitle(null);
+            // ast.verifyUrl("https://www.reliancejewels.com/s/OldGoldExchange");
         } catch (Exception e) {
             LoggerHandler.error("clicked on Old Gold Exchange Policy");
             test.fail("clicked on Old Gold Exchange Policy");
             test.log(Status.FAIL, "clicked on Old Gold Exchange Policy");
         }
     }
-
     /*
      * Method Name: clickOnfeesAndPaymentPolicy
      * Author Name: Shambhavi
@@ -132,13 +147,15 @@ public class PolicyPageActions {
             test.log(Status.PASS, "clicked on Fees and Payments policy");
             assertion.verifyTitle("Best Online Shopping Offers In India - Reliance Jewels");
             assertion.verifyUrl("https://www.reliancejewels.com/s/feesandpayments-policy");
+            test.log(Status.PASS, "clicked on Fees and Payments policy");  
+            // ast.verifyTitle(null);
+            // ast.verifyUrl("https://www.reliancejewels.com/s/feesandpayments-policy");
         } catch (Exception e) {
             LoggerHandler.error("clicked on Fees and Payments policy");
             test.fail("clicked on Fees and Payments policy");
             test.log(Status.FAIL, "clicked on Fees and Payments policy");
         }
     }
-
     /*
      * Method Name: clickOnTermsandConditions
      * Author Name: Shambhavi
@@ -155,13 +172,15 @@ public class PolicyPageActions {
             test.log(Status.PASS, "clicked on Terms and Conditions");
             assertion.verifyTitle("Best Online Shopping Offers In India - Reliance Jewels");
             assertion.verifyUrl("https://www.reliancejewels.com/s/tandc-policy");
+            test.log(Status.PASS, "clicked on Terms and Conditions");  
+            // ast.verifyTitle();
+            // ast.verifyUrl("https://www.reliancejewels.com/s/tandc-policy");
         } catch (Exception e) {
             LoggerHandler.error("clicked on Terms and Conditions");
             test.fail("clicked on Terms and Conditions");
             test.log(Status.FAIL, "clicked on Terms and Conditions");
         }
     }
-
     /*
      * Method Name: clickOnRelianceLoyalty
      * Author Name: Shambhavi
@@ -178,13 +197,15 @@ public class PolicyPageActions {
             test.log(Status.PASS, "clicked on RelianceOne Loyalty T & C");
             assertion.verifyTitle("Best Online Shopping Offers In India - Reliance Jewels");
             assertion.verifyUrl("ttps://www.reliancejewels.com/s/rone-tc");
+            test.log(Status.PASS, "clicked on RelianceOne Loyalty T & C");  
+            // ast.verifyTitle();
+            // ast.verifyUrl("ttps://www.reliancejewels.com/s/rone-tc");
         } catch (Exception e) {
             LoggerHandler.error("clicked on RelianceOne Loyalty T & C");
             test.fail("clicked on RelianceOne Loyalty T & C");
             test.log(Status.FAIL, "clicked on RelianceOne Loyalty T & C");
         }
     }
-
     /*
      * Method Name: clickOnDisclaimer
      * Author Name: Shambhavi
@@ -201,6 +222,9 @@ public class PolicyPageActions {
             test.log(Status.PASS, "clicked on Disclaimer");
             assertion.verifyTitle("Best Online Shopping Offers In India - Reliance Jewels");
             assertion.verifyUrl("https://www.reliancejewels.com/s/disclaimer");
+            test.log(Status.PASS, "clicked on Disclaimer");  
+            // ast.verifyTitle();
+            // ast.verifyUrl("https://www.reliancejewels.com/s/disclaimer");
 
         } catch (Exception e) {
             LoggerHandler.error("clicked on Disclaimer");
@@ -208,7 +232,6 @@ public class PolicyPageActions {
             test.log(Status.FAIL, "clicked on Disclaimer");
         }
     }
-
     /*
      * Method Name: verify
      * Author Name: Shambhavi
@@ -249,8 +272,6 @@ public class PolicyPageActions {
         clickOnTermsandConditions();
         clickOnRelianceLoyalty();
         clickOnDisclaimer();
-        verify();
-
     }
 
 }

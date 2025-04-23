@@ -4,8 +4,8 @@ import org.openqa.selenium.WebDriver;
 
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
-
 import uistore.DiamongPageLocators;
+import uistore.DiamondPageLocators;
 import utils.Assertion;
 import utils.LoggerHandler;
 import utils.Screenshot;
@@ -20,6 +20,7 @@ public DiamondPageActions(WebDriver driver,ExtentTest test){
     this.test = test;
 }
 DiamongPageLocators diamondEarrings = new DiamongPageLocators();
+DiamondPageLocators diamondEarrings = new DiamondPageLocators();
 public void verifyLogo() {
     try {
         assertion.verifyLogo(diamondEarrings.relianceJewelsLogo);

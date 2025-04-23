@@ -15,7 +15,7 @@ public class ShippingPageActions {
     WebDriverHelper helper;
     Assertion assertion;
     static ExtentTest test;
-
+    ExtentTest test;
     public ShippingPageActions(ExtentTest test) {
         try {
             helper = new WebDriverHelper(Base.driver);
