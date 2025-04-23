@@ -30,56 +30,67 @@ public class TestRunner extends Base {
         reports = Reporter.generateTestReport("Reliance_Report");
         test = reports.createTest("Reliance_TestFile");
     }
+
     @Test
     public void executeTestCase9() {
         HomePageActions_Shambhavi01 obj9 = new HomePageActions_Shambhavi01(test);
         obj9.testCase9();
     }
+
     @Test
     public void executeTestCase10() {
         HomePageActions_Shambhavi02 obj10 = new HomePageActions_Shambhavi02(test);
         obj10.testCase10();
     }
+
     @Test
     public void Test1() {
         HomePageActions_Deekshitha01 hp = new HomePageActions_Deekshitha01();
         hp.TestCase1();
     }
+
     @Test
     public void Test2() {
         HomePageActions_Deekshitha02 hp2 = new HomePageActions_Deekshitha02(test);
         hp2.TestCase2();
     }
+
     @Test
     public void testCase1() {
         HomePageActions_Vinay01 obj1 = new HomePageActions_Vinay01(test);
         obj1.test1();
     }
+
     @Test
     public void testCase2() {
         HomePageActions_Vinay02 obj1 = new HomePageActions_Vinay02(test);
         obj1.test2();
     }
+
     @Test
     public void vivahamTest() {
-        HomePageActions_tapaswini01 vivahamPageActions = new HomePageActions_tapaswini01(driver,test);
+        HomePageActions_tapaswini01 vivahamPageActions = new HomePageActions_tapaswini01(driver, test);
         vivahamPageActions.vivaham();
     }
+
     @Test
     public void executeTestCase1() {
         HomePageActions_arun01 obj1 = new HomePageActions_arun01(test);
         obj1.test1();
     }
+
     @Test
     public void executeTestCase2() {
         HomePageActions_arun02 obj2 = new HomePageActions_arun02(test);
         obj2.test2();
     }
+
     @Test
-    public void diamondEarrings(){
-        HomePageActions_tapaswini02 diamondEarringsActions = new HomePageActions_tapaswini02(driver,test);
+    public void diamondEarrings() {
+        HomePageActions_tapaswini02 diamondEarringsActions = new HomePageActions_tapaswini02(driver, test);
         diamondEarringsActions.earrings();
     }
+
     @AfterMethod
     public void closeRelianceJewels() {
         driver.quit();
