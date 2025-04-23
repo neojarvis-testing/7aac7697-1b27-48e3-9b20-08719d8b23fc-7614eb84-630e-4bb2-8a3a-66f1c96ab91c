@@ -2,7 +2,7 @@ package uistore;
 
 import org.openqa.selenium.By;
 
-public class HomePageLocators_arun01 {
+public class RingPageLocators {
     public static By search = By.xpath("//input[@id='q']");
     public static By gender = By.xpath("//div[text()='Gender']");
     public static By men = By.xpath("//a[text()=' Men ']");

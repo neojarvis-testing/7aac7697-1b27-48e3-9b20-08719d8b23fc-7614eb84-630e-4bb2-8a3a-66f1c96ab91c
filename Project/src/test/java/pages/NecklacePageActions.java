@@ -3,26 +3,26 @@ package pages;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 
-import uistore.HomePageLocators_arun02;
+import uistore.NecklacePageLocators;
 import utils.Assertion;
 import utils.Base;
 import utils.LoggerHandler;
 import utils.Screenshot;
 import utils.WebDriverHelper;
 
-public class HomePageActions_arun02 {
+public class NecklacePageActions {
     WebDriverHelper helper;
     Assertion asserts;
     ExtentTest test;
-    public HomePageActions_arun02(ExtentTest test) {
+    public NecklacePageActions(ExtentTest test) {
         helper = new WebDriverHelper(Base.driver);
         this.test=test;
     }
 
     public void clickSearch() {
         try {
-            helper.waitForTheElementToBeVisible(HomePageLocators_arun02.search, 10);
-            helper.clickOnElement(HomePageLocators_arun02.search);
+            helper.waitForTheElementToBeVisible(NecklacePageLocators.search, 10);
+            helper.clickOnElement(NecklacePageLocators.search);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -30,8 +30,8 @@ public class HomePageActions_arun02 {
 
     public void enterNecklace() {
         try {
-            helper.sendKeys(HomePageLocators_arun02.search, "Necklace");
-            helper.enterAction(HomePageLocators_arun02.search);
+            helper.sendKeys(NecklacePageLocators.search, "Necklace");
+            helper.enterAction(NecklacePageLocators.search);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -39,7 +39,7 @@ public class HomePageActions_arun02 {
 
     public void verifyNecklace() {
         try {
-            asserts.verifyText(HomePageLocators_arun02.necklaceText, "Necklace");
+            asserts.verifyText(NecklacePageLocators.necklaceText, "Necklace");
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -47,8 +47,8 @@ public class HomePageActions_arun02 {
 
     public void hoverProduct() {
         try {
-            helper.waitForTheElementToBeVisible(HomePageLocators_arun02.necklace, 15);
-            helper.hoverOverElement(HomePageLocators_arun02.necklace);
+            helper.waitForTheElementToBeVisible(NecklacePageLocators.necklace, 15);
+            helper.hoverOverElement(NecklacePageLocators.necklace);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -56,8 +56,8 @@ public class HomePageActions_arun02 {
 
     public void clickQuickView() {
         try {
-            helper.waitForTheElementToBeVisible(HomePageLocators_arun02.quick, 10);
-            helper.clickOnElement(HomePageLocators_arun02.quick);
+            helper.waitForTheElementToBeVisible(NecklacePageLocators.quick, 10);
+            helper.clickOnElement(NecklacePageLocators.quick);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -65,8 +65,8 @@ public class HomePageActions_arun02 {
 
     public void clickPopup() {
         try {
-            helper.waitForTheElementToBeVisible(HomePageLocators_arun02.close, 10);
-            helper.clickOnElement(HomePageLocators_arun02.close);
+            helper.waitForTheElementToBeVisible(NecklacePageLocators.close, 10);
+            helper.clickOnElement(NecklacePageLocators.close);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -74,8 +74,8 @@ public class HomePageActions_arun02 {
 
     public void clickNecklaceProduct() {
         try {
-            helper.waitForTheElementToBeVisible(HomePageLocators_arun02.necklace, 10);
-            helper.clickOnElement(HomePageLocators_arun02.necklace);
+            helper.waitForTheElementToBeVisible(NecklacePageLocators.necklace, 10);
+            helper.clickOnElement(NecklacePageLocators.necklace);
             LoggerHandler.info("click on the first product");
             test.info("click on the first product");
             test.log(Status.PASS,"click on the first product");
@@ -88,9 +88,9 @@ public class HomePageActions_arun02 {
 
     public void selectWeight() {
         try {
-            helper.waitForTheElementToBeVisible(HomePageLocators_arun02.weight, 10);
-            helper.clickOnElement(HomePageLocators_arun02.weight);
-            helper.selectDropDown(HomePageLocators_arun02.weight, "Gross Weight-2.34g");
+            helper.waitForTheElementToBeVisible(NecklacePageLocators.weight, 10);
+            helper.clickOnElement(NecklacePageLocators.weight);
+            helper.selectDropDown(NecklacePageLocators.weight, "Gross Weight-2.34g");
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -98,8 +98,8 @@ public class HomePageActions_arun02 {
 
     public void clickBuyNow() {
         try {
-            helper.waitForTheElementToBeVisible(HomePageLocators_arun02.buy, 10);
-            helper.clickOnElement(HomePageLocators_arun02.buy);
+            helper.waitForTheElementToBeVisible(NecklacePageLocators.buy, 10);
+            helper.clickOnElement(NecklacePageLocators.buy);
             Screenshot.takeScreenshotWithTimestamp("My Cart");
         } catch (Exception e) {
             e.printStackTrace();
@@ -108,8 +108,8 @@ public class HomePageActions_arun02 {
 
     public void clickProceedToPay(){
         try{
-            helper.waitForTheElementToBeVisible(HomePageLocators_arun02.pay, 10);
-            helper.clickOnElement(HomePageLocators_arun02.pay);
+            helper.waitForTheElementToBeVisible(NecklacePageLocators.pay, 10);
+            helper.clickOnElement(NecklacePageLocators.pay);
         }
         catch(Exception e){
             e.printStackTrace();

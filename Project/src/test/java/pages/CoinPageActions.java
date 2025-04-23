@@ -2,20 +2,23 @@ package pages;
 
 import org.openqa.selenium.WebDriver;
 
-import uistore.HomePageLocators_Deekshitha01;
+import com.aventstack.extentreports.ExtentTest;
+
+import uistore.CoinPageLocators;
 import utils.Assertion;
 import utils.Base;
 import utils.Screenshot;
 import utils.WebDriverHelper;
 
-public class HomePageActions_Deekshitha01 {
+public class CoinPageActions {
     WebDriverHelper helper;
     Assertion assertion;
-
-    public HomePageActions_Deekshitha01() {
+    ExtentTest test;
+    public CoinPageActions(ExtentTest test) {
         try {
             helper = new WebDriverHelper(Base.driver);
             assertion = new Assertion(Base.driver);
+            this.test=test;
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -25,7 +28,7 @@ public class HomePageActions_Deekshitha01 {
         try {
             // assertion.verifyLogo(HomePageLocators_Deekshitha01.logo);
             //assertion.verifyLogo(HomePageLocators_Deekshitha01.logo);
-            helper.hoverOverElement(HomePageLocators_Deekshitha01.coins);
+            helper.hoverOverElement(CoinPageLocators.coins);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -33,7 +36,7 @@ public class HomePageActions_Deekshitha01 {
 
     public void clickOnSilver() {
         try {
-            helper.clickOnElement(HomePageLocators_Deekshitha01.silver);
+            helper.clickOnElement(CoinPageLocators.silver);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -43,7 +46,7 @@ public class HomePageActions_Deekshitha01 {
         try {
             // assertion.verifyText(HomePageLocators_Deekshitha01.categories, "categories");
             //assertion.verifyText(HomePageLocators_Deekshitha01.categories, "categories");
-            helper.clickOnElement(HomePageLocators_Deekshitha01.gender);
+            helper.clickOnElement(CoinPageLocators.gender);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -51,8 +54,8 @@ public class HomePageActions_Deekshitha01 {
 
     public void clickOnWomen() {
         try {
-            helper.waitForTheElementToBeVisible(HomePageLocators_Deekshitha01.women,10);
-            helper.clickOnElement(HomePageLocators_Deekshitha01.women);
+            helper.waitForTheElementToBeVisible(CoinPageLocators.women,10);
+            helper.clickOnElement(CoinPageLocators.women);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -60,7 +63,7 @@ public class HomePageActions_Deekshitha01 {
 
     public void clickOnMoreFilters() {
         try {
-            helper.clickOnElement(HomePageLocators_Deekshitha01.morefilters);
+            helper.clickOnElement(CoinPageLocators.morefilters);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -68,7 +71,7 @@ public class HomePageActions_Deekshitha01 {
 
     public void clickOnTryOnAvailable() {
         try {
-            helper.clickOnElement(HomePageLocators_Deekshitha01.tryOnAvailable);
+            helper.clickOnElement(CoinPageLocators.tryOnAvailable);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -76,7 +79,7 @@ public class HomePageActions_Deekshitha01 {
 
     public void clickOnYes() {
         try {
-            helper.clickOnElement(HomePageLocators_Deekshitha01.yes);
+            helper.clickOnElement(CoinPageLocators.yes);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -84,7 +87,7 @@ public class HomePageActions_Deekshitha01 {
 
     public void clickOnFirstProduct() {
         try {
-            helper.clickOnElement(HomePageLocators_Deekshitha01.firstProduct);
+            helper.clickOnElement(CoinPageLocators.firstProduct);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -92,8 +95,8 @@ public class HomePageActions_Deekshitha01 {
 
     public void clickOnBuyNow() {
         try {
-            helper.waitForTheElementToBeVisible(HomePageLocators_Deekshitha01.productCode, 10);
-            helper.clickOnElement(HomePageLocators_Deekshitha01.buyNow);
+            helper.waitForTheElementToBeVisible(CoinPageLocators.productCode, 10);
+            helper.clickOnElement(CoinPageLocators.buyNow);
             // assertion.verifyText(HomePageLocators_Deekshitha01.productCode, "508198");
             //assertion.verifyText(HomePageLocators_Deekshitha01.productCode, "508198");
             Screenshot.takeScreenshotWithTimestamp("Screenshot1");
@@ -102,7 +105,7 @@ public class HomePageActions_Deekshitha01 {
         }
     }
 
-    public void TestCase1() {
+    public void test7() {
         try {
             clickOnCoins();
             clickOnSilver();

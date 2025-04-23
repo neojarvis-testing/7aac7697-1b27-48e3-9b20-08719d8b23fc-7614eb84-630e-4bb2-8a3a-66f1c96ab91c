@@ -2,7 +2,7 @@ package uistore;
 
 import org.openqa.selenium.By;
 
-public class HomePageLocators_Vinay02 {
+public class PlatinumPageLocators {
 public static By verifyLogo=By.xpath("//img[@src='//image.reliancejewels.com/Jewels/cms_hydrant/widgets/HS18Logo/HorizontalBannerImage_1593441799728.png']");
 public static By hoverRings=By.xpath("//a[text()='Rings']");
 public static By casualwear=By.xpath("//a[@href='https://www.reliancejewels.com/rings/category:136/filter_Occasion:%28%22Casual+Wear%22%29/']");

@@ -2,7 +2,7 @@ package uistore;
 
 import org.openqa.selenium.By;
 
-public class HomePageLocators_tapaswini01 {
+public class VivahamPageLocators {
     public By relianceJewelsLogo = By.cssSelector("img[title='Online Shopping in India']");
     public By whatsTrendingtext = By.xpath("(//a[@data-hover='dropdown'])[2]");
     public By vivaham = By.xpath("//a[text()='Vivaham']");

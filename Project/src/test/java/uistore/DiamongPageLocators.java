@@ -2,7 +2,7 @@ package uistore;
 
 import org.openqa.selenium.By;
 
-public class HomePageLocators_tapaswini02 {
+public class DiamongPageLocators {
     public By relianceJewelsLogo = By.cssSelector("img[title='Online Shopping in India']");
     public By earrringsText = By.xpath("//a[text()='Earrings']");
     public By diamondText = By.xpath("//a[@href='https://www.reliancejewels.com/category:133/']");
